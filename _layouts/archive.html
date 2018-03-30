@@ -1,0 +1,43 @@
+---
+layout: blog
+---
+
+{% if page.category %}
+    {% assign posts = site.categories[page.category] %}
+    {% assign filter_name = 'Category' %}
+    {% assign filter_value = page.category %}
+{% elsif page.tag  %}
+    {% assign posts = site.tags[page.tag] %}
+    {% assign filter_name = 'Tag' %}
+    {% assign filter_value = page.tag %}
+{% elsif page.month  %}
+    {% assign filter_value = page.month | strip %}
+    {% assign posts = '' | split: '' %}
+    {% for post in site.posts %}
+        {% assign post_month = post.date | date: "%Y.%m" %}
+
+        {% if filter_value == post_month %}
+            {% assign posts = posts | push: post  %}
+        {% endif %}
+    {% endfor %}
+    {% assign filter_name = 'Archive' %}
+{% else %}
+    {% assign posts = paginator.posts %}
+{% endif %}
+
+
+{% if filter_name %}
+<h2 class="archiveTtl">{{ filter_name }}: {{ filter_value }} </h2>
+{% endif %}
+<section class="articles">
+    {% for post in posts %}
+    <article><a href="{{ post.url }}">
+        <div class="thumb"><img src="{{ post.image }}">
+            <p class="detail"><span>View detail</span></p>
+        </div>
+        <h2 class="ttl">{{ post.title }}</h2>
+        <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p></a></article>
+    {% endfor %}
+</section>
+
+{{ content }}

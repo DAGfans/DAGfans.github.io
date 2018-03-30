@@ -1,0 +1,62 @@
+---
+layout: blog
+
+sub_name: detail
+---
+
+<article class="main">
+    <h1 class="ttl">{{ page.title }}</h1>
+    <p class="date">{{ page.date | date: "%Y.%m.%d"}}</p>
+    <section class="category">
+        <h2 class="ttl">Category</h2>
+        <div class="categories">
+            <ul>
+                {% for category in site.categories %}
+                <li><a href="/blog/categories/{{category[0]}}">{{ category[0] }} </a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <section class="tag">
+        <h2 class="ttl">Tags</h2>
+        <div class="tags">
+            <ul>
+                {% for tag in site.tags %}
+                <li><a href="/blog/tags/{{tag[0]}}">{{ tag[0] }} </a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <div class="inner">
+        <div class="body">
+            {{ content }}
+        </div>
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_shortname = '{{ site.disqus_shortname }}';
+            var disqus_config = function () {
+                this.page.url = "{{ page.url | prepend: site.url }}";
+                this.page.identifier = "{{ page.id }}";
+            };
+
+            (function() {  // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</article>
+<h2 class="relatedTtl">Related Posts</h2>
+<section class="articles">
+    {% for post in site.related_posts %}
+    <article><a href="{{ post.url }}">
+        <div class="thumb"><img src="{{ post.image }}"></div>
+        <h2 class="ttl">{{ post.title }}</h2>
+        <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p></a></article>
+    {% endfor %}
+</section>

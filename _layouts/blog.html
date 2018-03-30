@@ -1,0 +1,60 @@
+---
+layout: default
+
+main_name: blog
+description: Blog for DAG fans.
+
+---
+
+<header class="contentsTtl">
+    <h1>{{ layout.main_name | capitalize }}</h1>
+    <h2>{{ layout.description }}</h2>
+</header>
+<section class="hasCategories" id="searchPanel">
+    <p class="btnCategories closed"><a href="#">Categories</a></p>
+    <div class="categories closed">
+        <ul>
+            {% for category in site.categories %}
+            <li><a href="/blog/categories/{{ category[0]}}">{{ category[0] }} ({{ category[1] | size }})</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <p class="btnTags closed"><a href="#">Tags</a></p>
+    <div class="tags closed">
+        <ul>
+            {% for tag in site.tags %}
+            <li><a href="/blog/tags/{{ tag[0] }}">{{ tag[0] }} ({{ tag[1] | size }})</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <p class="btnMonthlyArchives closed"><a href="#">Monthly Archives</a></p>
+    <div class="monthlyArchives closed">
+        <ul>
+            {% for post in site.posts %}
+            {% capture current_month %}{{ post.date | date: "%y%m" }}{% endcapture %}
+            {% if current_month != previous_month %}
+            <li>
+                <a href="/blog/archives/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}">
+                    <span class="year">{{ post.date | date: "%Y" }}</span>
+                    <span class="month">{{ post.date | date: "%m" }}</span>
+                </a>
+            </li>
+            {% assign previous_month = current_month %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <p class="btnKeyword closed"><a href="#">Keyword</a></p>
+    <div class="keyword closed">
+        <form>
+            <input type="text"/>
+            <p class="btnSubmit"><a href="#">Search</a></p>
+        </form>
+    </div>
+    <p class="btnBack"><a href="#">Back</a></p>
+</section>
+<div class="inner">
+    {{ content }}
+</div>
+
+{% include google-search.html %}

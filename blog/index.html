@@ -1,0 +1,26 @@
+---
+layout: archive
+---
+
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <span class="prev"><a href="{{ paginator.previous_page_path }}">&lt;</a></span>
+    {% endif %}
+
+    <span {% if paginator.page== 1 %}class="current" {% endif %}>
+        <a href="/blog">1</a>
+    </span>
+
+    {% for p in (2..paginator.total_pages) %}
+    <span {% if paginator.page== p %}class="current" {% endif %}>
+        <a href="/blog/page/{{ p }}">{{ p }}</a>
+    </span>
+    {% endfor %}
+    <!-- span class="extend">...</span><span><a href="#">16</a></span -->
+
+    {% if paginator.next_page %}
+    <span class="next"><a href="{{ paginator.next_page_path }}">&gt;</a></span>
+    {% endif %}
+
+</div>
