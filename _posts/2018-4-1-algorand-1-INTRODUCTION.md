@@ -1,3 +1,11 @@
+---
+layout: posts
+categories:
+  - Paper
+tags:
+  - Algorand, Consensus, POS, VRF
+---
+
 * Source: https://people.csail.mit.edu/nickolai/papers/gilad-algorand-eprint.pdf
 * TranStudy: https://github.com/DAGfans/TranStudy/edit/master/Papers/Algorand/1-INTRODUCTION.md
 
