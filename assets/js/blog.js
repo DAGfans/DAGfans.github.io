@@ -206,7 +206,9 @@
 	    $keywordInput = this.$keyword.find('input');
 	    this.$keyword.find('.btnSubmit').on('click', (function(_this) {
 	      return function(e) {
-	        tkmh.searchByKeyword(dir, "?s=" + ($keywordInput.val()));
+	        // tkmh.searchByKeyword(dir, "?s=" + ($keywordInput.val()));
+			  $('input.gsc-input').val($keywordInput.val());
+              $('.gsc-search-button').click();
 	        return false;
 	      };
 	    })(this));
