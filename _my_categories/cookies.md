@@ -1,4 +1,0 @@
----
-layout: archive
-category: cookies
----
