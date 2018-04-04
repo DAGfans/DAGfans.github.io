@@ -12,7 +12,7 @@ sub_name: detail
         <div class="categories">
             <ul>
                 {% for category in site.categories %}
-                <li><a href="/blog/categories/{{category[0]}}">{{ category[0] }} </a></li>
+                <li><a href="/blog/categories/{{category[0] | downcase}}">{{ category[0] }} </a></li>
                 {% endfor %}
             </ul>
         </div>
@@ -22,7 +22,7 @@ sub_name: detail
         <div class="tags">
             <ul>
                 {% for tag in site.tags %}
-                <li><a href="/blog/tags/{{tag[0]}}">{{ tag[0] }} </a></li>
+                <li><a href="/blog/tags/{{tag[0] | downcase}}">{{ tag[0] }} </a></li>
                 {% endfor %}
             </ul>
         </div>
