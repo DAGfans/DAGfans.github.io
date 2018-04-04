@@ -3,7 +3,10 @@ layout: posts
 categories:
   - Paper
 tags:
-  - Algorand, Consensus, POS, VRF
+  - Algorand
+  - Consensus
+  - POS
+  - VRF
 ---
 
 * Source: https://people.csail.mit.edu/nickolai/papers/gilad-algorand-eprint.pdf
