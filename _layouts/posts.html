@@ -55,7 +55,9 @@ sub_name: detail
 <section class="articles">
     {% for post in site.related_posts %}
     <article><a href="{{ post.url }}">
-        <div class="thumb"><img src="{{ post.image }}"></div>
+        <div class="thumb">
+            <img src="{%if post.image %}{{ post.image }}{% else %} /assets/img/blog/noImg.png {% endif %}">
+        </div>
         <h2 class="ttl">{{ post.title }}</h2>
         <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p></a></article>
     {% endfor %}

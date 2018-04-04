@@ -2,6 +2,8 @@
 layout: posts
 categories:
   - Paper
+image: /dummy/thumb.png
+title: "Algorand 1:INTRODUCTION"
 tags:
   - Algorand
   - Consensus
@@ -9,8 +11,8 @@ tags:
   - VRF
 ---
 
-* Source: https://people.csail.mit.edu/nickolai/papers/gilad-algorand-eprint.pdf
-* TranStudy: https://github.com/DAGfans/TranStudy/edit/master/Papers/Algorand/1-INTRODUCTION.md
+* **Source:** https://people.csail.mit.edu/nickolai/papers/gilad-algorand-eprint.pdf
+* **TranStudy:** https://github.com/DAGfans/TranStudy/edit/master/Papers/Algorand/3-GOALS%20AND%20ASSUMPTIONS.md 
 
 ## 1 INTRODUCTION
 

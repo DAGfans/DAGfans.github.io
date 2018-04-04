@@ -32,7 +32,7 @@ layout: blog
 <section class="articles">
     {% for post in posts %}
     <article><a href="{{ post.url }}">
-        <div class="thumb"><img src="{{ post.image }}">
+        <div class="thumb"><img src="{%if post.image %}{{ post.image }}{% else %} /assets/img/blog/noImg.png {% endif %}">
             <p class="detail"><span>View detail</span></p>
         </div>
         <h2 class="ttl">{{ post.title }}</h2>
