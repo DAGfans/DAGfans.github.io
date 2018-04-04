@@ -31,7 +31,7 @@ layout: blog
 {% endif %}
 <section class="articles">
     {% for post in posts %}
-    <article><a href="{{ post.url | downcase }}">
+    <article><a href="{{ post.url  }}">
         <div class="thumb"><img src="{%if post.image %}{{ post.image }}{% else %} /assets/img/blog/noImg.png {% endif %}">
             <p class="detail"><span>View detail</span></p>
         </div>
