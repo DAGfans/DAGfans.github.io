@@ -54,7 +54,7 @@ sub_name: detail
 <h2 class="relatedTtl">Related Posts</h2>
 <section class="articles">
     {% for post in site.related_posts %}
-    <article><a href="{{ post.url }}">
+    <article><a href="{{ post.url | downcase }}">
         <div class="thumb">
             <img src="{%if post.image %}{{ post.image }}{% else %} /assets/img/blog/noImg.png {% endif %}">
         </div>
