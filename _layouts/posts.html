@@ -4,6 +4,13 @@ layout: blog
 sub_name: detail
 ---
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
 <article class="main">
     <h1 class="ttl">{{ page.title }}</h1>
     <p class="date">{{ page.date | date: "%Y.%m.%d"}}</p>
@@ -62,3 +69,5 @@ sub_name: detail
         <p class="date">{{ post.date | date: "%Y.%m.%d"}}</p></a></article>
     {% endfor %}
 </section>
+
+

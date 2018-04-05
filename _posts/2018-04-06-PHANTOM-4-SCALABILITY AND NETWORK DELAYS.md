@@ -75,7 +75,7 @@ with probability of $1 - δ$ at least. However, an attacker can artificially inc
 creating blocks that do not reference it and by withholding his blocks so that B cannot reference
 them.
 
-我们可以观察到在$[0, t - D_{max})$和$(t + D_{max}, ∞)$期间内由诚实节点创建的区块分别属于B的过去和将来集。因此，原则上$|anticone(B)| ≤ k$的概率至少为$1 - δ$。尽管如此，攻击者可以通过创建不引用B的区块，并且将区块隐藏起来不让B指向它们，从而人为增大B的反锥体。
+我们可以观察到在$[0, t - D_{max})$和$(t + D_{max}, ∞)$期间内由诚实节点创建的区块分别属于B的过去和将来集。因此，原则上$\|anticone(B)\| ≤ k$的概率至少为$1 - δ$。尽管如此，攻击者可以通过创建不引用B的区块，并且将区块隐藏起来不让B指向它们，从而人为增大B的反锥体。
 
 
 ## C. Trade-offs
