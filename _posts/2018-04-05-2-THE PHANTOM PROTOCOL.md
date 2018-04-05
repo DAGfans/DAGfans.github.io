@@ -1,3 +1,14 @@
+---
+layout: posts
+categories:
+  - Paper
+image: https://user-images.githubusercontent.com/22833166/37557316-b6d343a4-2a3d-11e8-8ac2-e66eab0aab45.jpg
+title: "PHANTOM 2:THE PHANTOM PROTOCOL"
+tags:
+  - DAG
+---
+
+
 > **Source：** [https://eprint.iacr.org/2018/104.pdf](https://eprint.iacr.org/2018/104.pdf)  
 > **TranStudy：** [https://github.com/DAGfans/TranStudy/edit/master/Papers/PHANTOM/2-THE%20PHANTOM%20PROTOCOLmd](https://github.com/DAGfans/TranStudy/edit/master/Papers/PHANTOM/2-THE%20PHANTOM%20PROTOCOLmd)
 
