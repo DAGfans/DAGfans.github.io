@@ -60,16 +60,16 @@ PHANTOM协议假定D总是小于某个常数$D_{max}$（两者都取决于块大
 **Proof-of-work.** Nodes create blocks of transactions by solving Proof-of-work puzzles. 
 Block creation follows a Poisson process with parameter λ. 
 For the sake of simplicity, we assume that λ is constant.^7 
-The computational power of node $v∈ N$ is captured by $0 < αv< 1$ , which represents the probability that node v will be the creator of the next block in the system (at any point in time; this is a memoryless process). 
+The computational power of node $v∈ N$ is captured by $0 < α_v< 1$ , which represents the probability that node v will be the creator of the next block in the system (at any point in time; this is a memoryless process). 
 The attackers’ computational power is less than 50%. 
-Thus $∑_{v∈N}α_v= 1$, and $∑_{v∈malicious}α_v := α <0.5$.
+Thus $∑\_{v∈N}α\_v=1$, and $∑\_{v∈malicious}α\_v := α <0.5$.
 
 工作量证明。节点通过解决工作量证明难题来创建交易块。 
 块创建遵循具有参数λ的泊松过程。 
 为了简单起见，我们假设λ是恒定的。^7 
 节点$v∈ N$的计算能力限定在$0 < α_v< 1$，它表示节点v将是系统中下一个块的创建者（在任何时间点; 这是一个无记忆的过程）的概率。 
 攻击者的计算能力不到50％。 
-因此，$∑_{v∈N}α_v= 1$， $∑_{v∈malicious}α_v := α <0.5$（译注：原文在这里用的符号=:是笔误，实际应该是:=，表示“定义为”）。
+因此，$∑\_{v∈N}α\_v= 1$， $∑\_{v∈malicious}α\_v := α <0.5$（译注：原文在这里用的符号=:是笔误，实际应该是:=，表示“定义为”）。
 
 (^7) In practice, λ must occasionally be readjusted to account for shifting network conditions. 
 PHANTOM can support a retargeting mechanism similar to Bitcoin’s, e.g., readjust every time that $Chn(G)$ grows by 2016 blocks. 
@@ -131,11 +131,11 @@ In Figure 1 above we illustrates this terminology.
 
 **DAG mining protocol.** $G_t^v$ denotes the block DAG that node $v ∈ N$ observes at time t. 
 This DAG represents the history of all (valid) block-messages received by the node. 
-$G_t^{oracle} := ∪_{v∈N} G_t^v$ denotes the block DAG of a hypothetical oracle node, and $G_t^{pub} := ∪_{v∈honest} G_t^v$ denotes the block DAG containing all blocks that are visible to some honest node(s).
+$G\_t^{oracle} := ∪\_{v∈N} G_t^v$ denotes the block DAG of a hypothetical oracle node, and $G_t^{pub} := ∪_{v∈honest} G_t^v$ denotes the block DAG containing all blocks that are visible to some honest node(s).
 
 **DAG 挖矿协议.** $G_t^v$表示节点$v ∈ N$在时间t观察到的区块有向无环图（BlockDAG）。 
 这个有向无环图（DAG）表示节点接收到的所有（有效）块消息的历史。
-$G_t^{oracle} := ∪_{v∈N} G_t^v$表示某个假定的预言节点的区块有向无环图（BlockDAG），而$G_t^{pub} := ∪_{v∈honest} G_t^v$表示包含了对某个(些)诚实节点可见的所有区块的有向无环图(BlockDAG)。
+$G_t^{oracle} := ∪\_{v∈N} G_t^v$表示某个假定的预言节点的区块有向无环图（BlockDAG），而$G_t^{pub} := ∪_{v∈honest} G_t^v$表示包含了对某个(些)诚实节点可见的所有区块的有向无环图(BlockDAG)。
 **译注：** 这个oracle在Spectre论文应用比较多，是一个假定拥有所有信息的节点，方便论述
 
 A tip of the DAG is a leaf-block, namely, a block with in-degree 0. 
