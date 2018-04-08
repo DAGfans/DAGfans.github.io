@@ -2,7 +2,7 @@
 layout: posts
 categories:
   - Paper
-image: (https://user-images.githubusercontent.com/22833166/35630516-97a52aee-06dc-11e8-8362-d109d7c0f32e.png)
+image: https://user-images.githubusercontent.com/22833166/35630516-97a52aee-06dc-11e8-8362-d109d7c0f32e.png
 title: "DagCoin Draft"
 tags:
   - DAG
