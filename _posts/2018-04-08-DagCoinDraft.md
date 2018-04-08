@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/22833166/35630516-97a52aee-06dc-11e8-8362-d109d7c0f32e.png
 title: "DagCoin Draft"
 tags:
-  - DAG
+  - DagCoin
 ---
 
 > **Source：** [https://bitslog.files.wordpress.com/2015/09/dagcoin-v41.pdf](https://bitslog.files.wordpress.com/2015/09/dagcoin-v41.pdf)  
