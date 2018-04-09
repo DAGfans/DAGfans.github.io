@@ -18,8 +18,8 @@ MathJax.Hub.Config({
         <h2 class="ttl">Category</h2>
         <div class="categories">
             <ul>
-                {% for category in site.categories %}
-                <li><a href="/blog/categories/{{category[0] | downcase}}">{{ category[0] }} </a></li>
+                {% for category in page.categories %}
+                <li><a href="/blog/categories/{{category | downcase}}">{{ category }} </a></li>
                 {% endfor %}
             </ul>
         </div>
@@ -28,8 +28,8 @@ MathJax.Hub.Config({
         <h2 class="ttl">Tags</h2>
         <div class="tags">
             <ul>
-                {% for tag in site.tags %}
-                <li><a href="/blog/tags/{{tag[0] | downcase}}">{{ tag[0] }} </a></li>
+                {% for tag in page.tags %}
+                <li><a href="/blog/tags/{{tag | downcase}}">{{ tag }} </a></li>
                 {% endfor %}
             </ul>
         </div>
