@@ -229,7 +229,7 @@
 	    })(this));
 	    this.initAsyncTransition();
 	    this.$window.on({
-	      scroll: this.windowScrollHandler,
+	      // scroll: this.windowScrollHandler,
 	      resize: this.windowResizeHandler,
 	      orientationchange: this.orientationChangeHandler,
 	      popstate: (function(_this) {
