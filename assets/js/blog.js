@@ -52,9 +52,9 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	var Blog;
-	
+
 	Blog = __webpack_require__(2);
-	
+
 	$(function() {
 	  return new Blog();
 	});
@@ -67,16 +67,16 @@
 	var Blog, Contents,
 	  extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	  hasProp = {}.hasOwnProperty;
-	
+
 	Contents = __webpack_require__(3);
-	
+
 	Blog = (function(superClass) {
 	  extend(Blog, superClass);
-	
+
 	  function Blog() {
 	    Blog.__super__.constructor.call(this, 'blog');
 	  }
-	
+
 	  Blog.prototype.init = function() {
 	    Blog.__super__.init.call(this);
 	    this.initThumbs();
@@ -88,21 +88,22 @@
 	    });
 	    this.$window.on('resize.contents', this.resizeSearchPanel).trigger('resize.contents');
 	  };
-	
+
 	  Blog.prototype.start = function() {
-	    tkmh.animateToTtl('blog');
+          this.$mainVisual.hide();
+          tkmh.pause();
 	  };
-	
+
 	  Blog.prototype.reset = function() {
 	    this.$window.off('resize.contents');
 	    this.resetSearchPanel();
 	    this.resetBtnBack();
 	  };
-	
+
 	  return Blog;
-	
+
 	})(Contents);
-	
+
 	module.exports = Blog;
 
 
@@ -112,20 +113,20 @@
 
 	var Contents, Thumb,
 	  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-	
+
 	Thumb = __webpack_require__(4);
-	
+
 	Contents = (function() {
 	  function Contents(id) {
 	    this.id = id != null ? id : '';
 	    this.resizeSearchPanel = bind(this.resizeSearchPanel, this);
 	    tkmh.currentContents = this;
 	  }
-	
+
 	  Contents.prototype.reset = function() {};
-	
+
 	  Contents.prototype.start = function() {};
-	
+
 	  Contents.prototype.init = function() {
 	    this.$window = $(window);
 	    this.$body = $('body');
@@ -134,11 +135,11 @@
 	    this.$mainVisual = $('#mainVisual');
 	    this.$globalHeader = $('#globalHeader');
 	  };
-	
+
 	  Contents.prototype.initThumbs = function() {
 	    this.initImgs('.articles .thumb img');
 	  };
-	
+
 	  Contents.prototype.initImgs = function(selector) {
 	    this.$contentsInner.find(selector).each(function(index, img) {
 	      return utils.preloadImg(img.src).then(function() {
@@ -149,7 +150,7 @@
 	      });
 	    });
 	  };
-	
+
 	  Contents.prototype.initThumbsInteraction = function(selector, widthSegments, heightSegments) {
 	    var self;
 	    if (widthSegments == null) {
@@ -170,7 +171,7 @@
 	      return thumb.init();
 	    });
 	  };
-	
+
 	  Contents.prototype.disposeThumbsInteraction = function() {
 	    var i, len, ref, thumb;
 	    if (!utils.isDesktop) {
@@ -182,7 +183,7 @@
 	      thumb.dispose();
 	    }
 	  };
-	
+
 	  Contents.prototype.initBtnBack = function(dir) {
 	    this.$btnBack = this.$searchPanel.find('.btnBack').on('click', (function(_this) {
 	      return function(e) {
@@ -191,11 +192,11 @@
 	      };
 	    })(this));
 	  };
-	
+
 	  Contents.prototype.resetBtnBack = function() {
 	    this.$btnBack.off('click');
 	  };
-	
+
 	  Contents.prototype.initSearchPanel = function(dir) {
 	    var $keywordInput, toggleContent;
 	    this.$searchPanel = $('#searchPanel');
@@ -263,25 +264,25 @@
 	      };
 	    })(this));
 	  };
-	
+
 	  Contents.prototype.resizeSearchPanel = function() {
 	    this.$categories.css('height', this.$categories.find('ul').outerHeight());
 	    this.$tags.css('height', this.$tags.find('ul').outerHeight());
 	    this.$monthlyArchives.css('height', this.$monthlyArchives.find('ul').outerHeight());
 	    this.$keyword.css('height', this.$keyword.find('form').outerHeight());
 	  };
-	
+
 	  Contents.prototype.resetSearchPanel = function() {
 	    this.$btnCategories.off('click');
 	    this.$btnTags.off('click');
 	    this.$btnMonthlyArchives.off('click');
 	    this.$btnKeyword.off('click');
 	  };
-	
+
 	  return Contents;
-	
+
 	})();
-	
+
 	module.exports = Contents;
 
 
@@ -291,12 +292,12 @@
 
 	var Thumb,
 	  bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-	
+
 	Thumb = (function() {
 	  var _GEOMETRY_SIZE;
-	
+
 	  _GEOMETRY_SIZE = 100;
-	
+
 	  function Thumb($container, widthSegments, heightSegments) {
 	    this.$container = $container;
 	    this.widthSegments = widthSegments != null ? widthSegments : 20;
@@ -305,7 +306,7 @@
 	    this.draw = bind(this.draw, this);
 	    this.isWebGLSupported = false;
 	  }
-	
+
 	  Thumb.prototype.init = function(callback) {
 	    if (Detector.webgl) {
 	      this.initWebGL(callback);
@@ -316,7 +317,7 @@
 	      }
 	    }
 	  };
-	
+
 	  Thumb.prototype.initWebGL = function(callback) {
 	    var $img, i, imgPath, j, noiseValues, numVertices, pixelRatio, ref;
 	    this.isWebGLSupported = true;
@@ -397,15 +398,15 @@
 	      })(this)
 	    });
 	  };
-	
+
 	  Thumb.prototype.draw = function() {
 	    this.renderer.render(this.scene, this.camera);
 	  };
-	
+
 	  Thumb.prototype.resizeMesh = function() {
 	    this.mesh.scale.set(this.width / _GEOMETRY_SIZE, this.height / _GEOMETRY_SIZE, 1.0);
 	  };
-	
+
 	  Thumb.prototype.dispose = function() {
 	    this.$container.off('mouseover');
 	    this.$container.off('mouseout');
@@ -416,7 +417,7 @@
 	    this.scene.remove(this.camera);
 	    this.renderer.dispose();
 	  };
-	
+
 	  Thumb.prototype.resize = function() {
 	    var cameraZ;
 	    this.width = this.$container.outerWidth();
@@ -428,11 +429,11 @@
 	    this.resizeMesh();
 	    this.renderer.setSize(this.width, this.height);
 	  };
-	
+
 	  return Thumb;
-	
+
 	})();
-	
+
 	module.exports = Thumb;
 
 

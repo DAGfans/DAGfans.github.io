@@ -78,6 +78,8 @@
 	  }
 	
 	  Index.prototype.start = function() {
+	  	this.$mainVisual.show();
+	  	tkmh.start();
 	    tkmh.animateFromTtl();
 	  };
 	

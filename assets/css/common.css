@@ -1362,6 +1362,7 @@ body:not(.index):not(.hiding) #mainVisual .btnScroll {
 }
 
 #searchPanel {
+  margin-top: 60px;
   margin-bottom: 60px;
   padding-top: 24px;
   position: relative;

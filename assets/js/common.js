@@ -205,6 +205,7 @@
 	    this.$globalHeader = $('#globalHeader');
 	    this.$globalNav = $('#globalNav');
 	    this.$mainVisual = $('#mainVisual');
+	    this.$mainVisual.hide();
 	    this.requestAnimationFrameId = null;
 	    $('#btnMenu a').on('click', (function(_this) {
 	      return function(e) {
@@ -265,6 +266,17 @@
 	        }
 	      };
 	    })(this);
+	    tkmh.pause = (function(_this) {
+	      return function() {
+	        _this.pause();
+	      };
+	    })(this);
+        tkmh.start = (function(_this) {
+            return function() {
+                _this.start();
+            };
+        })(this);
+
 	    this.mainVisual.init((function(_this) {
 	      return function() {
 	        var $loading;
