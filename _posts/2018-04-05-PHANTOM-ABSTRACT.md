@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/22833166/37466668-513aa8f2-2899-11e8-96be-87aa97b56fe1.jpg
 title: "PHANTOM :ABSTRACT"
 tags:
-  - DAG
+  PHANTOM
 ---
 
 > **Source：** [https://eprint.iacr.org/2018/104.pdf](https://eprint.iacr.org/2018/104.pdf)  
