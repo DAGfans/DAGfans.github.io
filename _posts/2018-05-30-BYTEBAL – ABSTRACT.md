@@ -2,7 +2,7 @@
 layout: posts
 categories:
   - Paper
-image: ![byteball](https://user-images.githubusercontent.com/39436379/40722979-57ab0e5a-6450-11e8-9058-a5e64b9aa1bc.JPG)
+image:![byteball](https://user-images.githubusercontent.com/39436379/40723566-c0ef5c94-6451-11e8-8e0e-f80b24687c63.JPG)
 title: "BYTEBALL:ABSTRACT"
 tags:
   BYTEBALL
