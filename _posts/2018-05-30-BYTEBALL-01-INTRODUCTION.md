@@ -2,7 +2,7 @@
 layout: posts
 categories:
   - Paper
-image: https://user-images.githubusercontent.com/22833166/38848616-90b68176-423a-11e8-87e1-0287b5ed15e6.png
+image: https://pic4.zhimg.com/80/v2-12543816ae1cbde3b704e66d9d64afdf_hd.jpg
 title: "BYTEBALL:1.INTRODUCTION"
 tags:
   BYTEBALL
