@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/22833166/37557316-b6d343a4-2a3d-11e8-8ac2-e66eab0aab45.jpg
 title: "PHANTOM 3:FORMAL MODEL AND STATEMENT"
 tags:
-  - DAG
+  PHANTOM
 ---
 
 
