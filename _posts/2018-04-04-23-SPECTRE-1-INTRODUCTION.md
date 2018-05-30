@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/22833166/38848616-90b68176-423a-11e8-87e1-0287b5ed15e6.png
 title: "SPECTRE:1.INTRODUCTION"
 tags:
-  - DAG
+  SPECTRE
 ---
 
 
