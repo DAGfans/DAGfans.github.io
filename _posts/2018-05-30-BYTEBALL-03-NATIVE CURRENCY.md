@@ -3,7 +3,7 @@ layout: posts
 categories:
   - Paper
 image: https://user-images.githubusercontent.com/39436379/40726422-4edc1474-6458-11e8-81bd-c36e005d1037.jpg
-title: "BYTEBALL:3.NATIVE CURRENCY"
+title: "BYTEBALL:3.NATIVE CURRENCY:BYTE"
 tags:
   BYTEBALL
 ---
