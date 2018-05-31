@@ -2,8 +2,8 @@
 layout: posts
 categories:
   - Paper
-image:https://user-images.githubusercontent.com/39436379/40726422-4edc1474-6458-11e8-81bd-c36e005d1037.jpg
-title: "BYTEBALL:1.INTRODUCTION"
+image: https://user-images.githubusercontent.com/39436379/40726422-4edc1474-6458-11e8-81bd-c36e005d1037.jpg
+title: "BYTEBALL:1.INSTRUCTION"
 tags:
   BYTEBALL
 ---
