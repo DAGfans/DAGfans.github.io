@@ -2,7 +2,7 @@
 layout: posts
 categories:
   - Paper
-image: https://user-images.githubusercontent.com/39436379/40726422-4edc1474-6458-11e8-81bd-c36e005d1037.jpg
+image: https://user-images.githubusercontent.com/39436379/40982280-700c70f6-690f-11e8-9b13-6d523d030eb0.png
 title: "An Introduction to the BlockDAG Paradigm"
 tags:
   BASIS
