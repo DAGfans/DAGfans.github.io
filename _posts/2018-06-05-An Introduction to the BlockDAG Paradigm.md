@@ -27,7 +27,7 @@ A DAG is not a novel concept or technology, and it is definitely not a consensus
 
 DAG 并不是一个新概念或是技术，并且它当然也不是一个共识机制；它纯粹是起源于几个世纪前的一种数学结构。在技术上，DAG 是一种包含有向边但不含环（即没有一条可以从一个顶点出发然后又回到它自己的路径）的图。
 
-[图片上传失败...(image-dbd9b4-1528206163861)]
+![DAG](https://cdn-images-1.medium.com/max/1600/1*aYmhytXcO6yxNpatmPwIIA.png)
 
 In the context of distributed ledgers, a blockDAG is a DAG whose vertices represent blocks and whose edges represent references from blocks to their predecessors. Evidently, in a blockDAG, blocks may have several predecessors instead of just one; this will be described in more detail below. First, let us recall the orphan rate problem.
 
