@@ -57,7 +57,7 @@ The notion of a fork is organically absorbed in the DAG framework, so it seems w
 
 DAG 框架有机地吸收了分叉这一概念，所以看上去 DAG 是否可以比链式／链表结构的区块链做得更好这件事情是值得我们考虑的。于是，以中本聪的工作量证明系统为基础，为了生成一个区块 DAG，我们需要对挖矿协议做出一个改变：区块可以引用多个父辈，而非一个单一的父亲。一种典型的扩展账本的方式是让区块引用（产生区块的挖矿者在本地能看到的）图中的所有末端，而非依照中本聪的原始协议只引用最长链的末端。
 
-[图片上传失败...(image-6fb31b-1528206163861)]
+![blockDAG](https://cdn-images-1.medium.com/max/2000/1*YJgJTzHlnrXrDU_ddsWtAA.png)
 
 In a canonical blockDAG ledger, new blocks reference all tips of the graph (blocks that have not yet been referenced) that their miners see locally. As in a blockchain, blocks are published immediately.
 
