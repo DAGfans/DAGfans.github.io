@@ -1,10 +1,10 @@
-# 如何在 [DAG fans 官网](https://dagfans.org) 添加文章
+# 如何在 [DAG fans](https://dagfans.org) 官网添加文章
 
-本 github 仓库与 [DAG fans 官网](https://dagfans.org) 直接对应。在本仓库中做的改动会立即体现在官网上（不过一般因为缓存的缘故，可能会有一段时间的延迟）。
+本 github 仓库与 [DAG fans](https://dagfans.org) 官网直接对应。在本仓库中做的改动会立即体现在官网上（不过一般因为缓存的缘故，可能会有一段时间的延迟）。
 
 在 DAG fans 官网上添加新文章的方法如下：
 
-1. 在 [_post 目录](https://github.com/DAGfans/DAGfans.github.io/tree/master/_posts) 为新文章创建一份空白文件。文件名的形式必须是 yyyy-mm-dd-{title}.md，其中 {title} 是文章的标题。
+1. 在 [_post ](https://github.com/DAGfans/DAGfans.github.io/tree/master/_posts) 目录为新文章创建一份空白文件。文件名的形式必须是 yyyy-mm-dd-{title}.md，其中 {title} 是文章的标题。
 2. 将文章内容全部粘贴进刚创建的文件中。
 3. 在文件头部添加 yaml 格式的描述信息。如下面的例子所示：
 
