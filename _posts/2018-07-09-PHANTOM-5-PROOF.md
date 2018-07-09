@@ -59,11 +59,11 @@ Now, Algorithm 2 pushes a block into the queue only after it has pushed already 
 
 Proof. In the proof of the previous lemma we have shown that $\hat{B} \in Chn(G)$ . By the recursive operation of Algorithm 1 (lines 6-7), this implies that $G$ inherits the colouring of $\hat{B}$ on its past: $BLUE_k(G) \cap past(\hat{B}) = BLUE_k(past(\hat{B}))$ .
 
-证明： 在上一个引理的证明中，我们已经展示了 $\hat{B} in Chn(G)$ 。算法1的递归操作（第6-7行）意味着 $G$ 继承了 $\hat{B}$ 的过去集的着色： $BLUE_k(G) \cap past(\hat{B}) = BLUE_k(past(\hat{B}))$ 。
+证明： 在上一个引理的证明中，我们已经展示了 $\hat{B} \in Chn(G)$ 。算法1的递归操作（第6-7行）意味着 $G$ 继承了 $\hat{B}$ 的过去集的着色： $BLUE_k(G) \cap past(\hat{B}) = BLUE_k(past(\hat{B}))$ 。
 
-Now, no block in $anticone(\hat{B})$ is pushed into $topo\_queue$ before $\hat{B}$ is popped out, because blocks get pushed in only if they are blue (and no such block exists in $anticone(\hat{B})$ ) or if a blue block in their future was pushed in-—and this too only happens after $\hat{B}$ is popped out. Since the queue respects the topology, this means that all blocks in $past(\hat{B})$ (which must be visited before $\hat{B}$ ) are popped out before any block outside $past(\hat{B})$ .
+Now, no block in $anticone(\hat{B})$ is pushed into topo_queue before $\hat{B}$ is popped out, because blocks get pushed in only if they are blue (and no such block exists in $anticone(\hat{B})$ ) or if a blue block in their future was pushed in-—and this too only happens after $\hat{B}$ is popped out. Since the queue respects the topology, this means that all blocks in $past(\hat{B})$ (which must be visited before $\hat{B}$ ) are popped out before any block outside $past(\hat{B})$ .
 
-现在，在 $\hat{B}$ 从 $topo\_queue$ 中被弹出之前， $anticone(\hat{B})$ 中没有区块被压入 $topo\_ queue$ 。这是因为一个区块必须要满足以下两个条件之一才会被压入队列：要么该区块是蓝色（而这样的区块在 $anticone(\hat{B})$ 中并不存在）；要么该区块将来集中的某个蓝色区块被压入队列——这也只能发生在 $\hat{B}$ 被弹出之后。因为队列遵循拓扑，所以 $past(\hat{B})$ 中的所有区块（它们肯定都在 $\hat{B}$ 之前被访问过）都会在 $past(\hat{B})$ 以外的任意区块之前被弹出。
+现在，在 $\hat{B}$ 从topo_queue中被弹出之前， $anticone(\hat{B})$ 中没有区块被压入 $topo\_ queue$ 。这是因为一个区块必须要满足以下两个条件之一才会被压入队列：要么该区块是蓝色（而这样的区块在 $anticone(\hat{B})$ 中并不存在）；要么该区块将来集中的某个蓝色区块被压入队列——这也只能发生在 $\hat{B}$ 被弹出之后。因为队列遵循拓扑，所以 $past(\hat{B})$ 中的所有区块（它们肯定都在 $\hat{B}$ 之前被访问过）都会在 $past(\hat{B})$ 以外的任意区块之前被弹出。
 
 The fact that blocks in $anticone(\hat{B})$ are not pushed into the queue before all of $past(\hat{B})$ is popped out, implies further that the order in which Algorithm 2 pushes blocks in $past(\hat{B})$ into and out of $topo\_ queue$ depends only on $past(\hat{B})$ , and not on the DAG $G$ . Hence, $ord(G) \cap past(\hat{B}) = ord(past(\hat{B})$ .
 
@@ -119,7 +119,8 @@ The following claim states that the first two conditions in the above definition
 
 下面的断言表示，上面定义中的前两个条件保证了只要 $\hat{B}$ 是蓝色的，它的反锥体中就没有区块是蓝色的：
 
-**Claim 1.** Assume that for some block $\hat{B}$ the first two conditions in the definition of $\varepsilon(t_0)$ hold true. Then, as long as $\hat{B}$ is blue, all blue blocks have $\hat{B}$ in their past: $\forall s \geq u, \forall B \in anticone(\hat{B}) : B \notin BLUE_k(G_s^{pub}) \lor \hat{B} \notin BLUE_k(G_s^{pub})$ .
+**Claim 1.** Assume that for some block $\hat{B}$ the first two conditions in the definition of $\varepsilon(t_0)$ hold true. Then, as long as $\hat{B}$ is blue, all blue blocks have $\hat{B}$ in their past: 
+$\forall s \geq u, \forall B \in anticone(\hat{B}) : B \notin BLUE_k(G_s^{pub}) \lor \hat{B} \notin BLUE_k(G_s^{pub})$ .
 
 **断言1：**_假设某个区块 $\hat{B}$ 满足 $\varepsilon(t_0)$ 定义中的前两个条件。那么，只要 $\hat{B}$ 是蓝色的，所有蓝色区块的过去集都会包含 $\hat{B}$ ： $\forall s \geq u, \forall B \in anticone(\hat{B}) : B \notin BLUE_k(G_s^{pub}) \lor \hat{B} \notin BLUE_k(G_s^{pub})$ 。_
 
@@ -146,15 +147,15 @@ Proof of Claim 3. Part I: We begin by assuming that the attacker did not publish
 断言 3 证明: 第一部分：我们首先假设攻击者在时间间隔 $[0,u-D_{max})$; formally, we assume that $\forall C \in past(\widehat{B}):C\in honest$
 
 
-Let us compare the score of the honest chain to that of any chain that excludes $\widehat(B)$ . This gap is captured by the following definition: For a time $r > 0$ , define
+Let us compare the score of the honest chain to that of any chain that excludes $\hat(B)$ . This gap is captured by the following definition: For a time $r > 0$ , define
 
-让我们比较诚实链和任何排除 $\widehat(B)$ 的链的得分。以下定义可以看出这一差距：对于时间 $r > 0$ ，定义
+让我们比较诚实链和任何排除 $\hat(B)$ 的链的得分。以下定义可以看出这一差距：对于时间 $r > 0$ ，定义
 
- $X^{1}_r:=\max_{B:\widehat{B} \notin Chn(B)}\{score(Chn(B))\}$
+$X^{1}_ r:=\max_{B:\widehat{B} \notin Chn(B)}\{score(Chn(B))\}$
 
- $X^{2}_r:=\max_{B:\widehat{B} \in Chn(B)}\{score(Chn(B))\}$
+$X^{2}_ r:=\max_{B:\widehat{B} \in Chn(B)}\{score(Chn(B))\}$
 
- $X_r:=X^{1}_r-X^{2}_r$
+$X_r:=X^{1}_ r-X^{2}_ r$
 
 Let us focus first on the evolution of the process $X_r$ between time 0 and time $u−T_1$ . We refer to the lead $X_u−T_1$ ，that the attacker obtained at the end of this stage as “the premining gap”; see [8].
 
@@ -166,7 +167,7 @@ Let $B^{r}_1$ be the argmax of $X^{1}_r$ , and let $C^{r}_1$ be the latest block
 
 Recall that for now we are assuming that all attacker blocks that were premined were kept secret until after time $u−D_max$ . Observe that at most k blocks that were created by the attacker before $time(C^{r}_1)$ can be in $BLUE_k(past(B^{r}_1))$ and can contribute to the score of the attacker’s chain.
 
-回想一下，现在我们假设所有被预设的攻击者块都保密，直到时间 $u-D_{max}$ 之后。观察到在 $time(C^{r}_1)$ 之前由攻击者创建的至多k个块可以在 $BLUE_k(pst(B^{r}_1))$ 中，并且可以贡献得分给攻击者链条。
+回想一下，现在我们假设所有被预设的攻击者块都保密，直到时间 $u-D_{max}$ 之后。观察到在 $time(C^{r}_1)$ 之前由攻击者创建的至多k个块可以在 $BLUE_k(past(B^{r}_1))$ 中，并且可以贡献得分给攻击者链条。
 
 Thus, between $time(C^{r}_1)$ and time $u−T_1-i.e.$ , during the premining phase – the score of the attacker chain grows only via the contribution of attacker blocks, and therefore at a rate of $\alpha \cdot \beta$ at most.^{14}
 
@@ -180,7 +181,7 @@ Now, by the choice of $K(D_{max},\delta )$ (defined in 1), the probability of an
 
 现在，通过 $K(D_{max},\delta )$ （在定义 1中）的选择，任意诚实块 $B$ 具有太大的诚实反锥体的概率是小的：^{15}
 
-$\Pr_{B\sim arbitrary\ honest\ block\ in\ G^{pub}_t}\(|\overline{anticone_h}(B,G^{pub}_t)| > k(D_{max},\delta ))$
+$\Pr_{B\sim arbitrary\ honest\ block\ in\ G^{pub}_ t}\(|\overline{anticone_h}(B,G^{pub}_ t)| > k(D_{max},\delta ))$
 
 This is because block creation follows a Poisson process, and because honest blocks that were created $D_{max}$ seconds before (after) $B$ belong to its past (future), hence are not in its anticone. Since any block that is blue in the honest chain contributes to its score, at any time interval, the score of the public chain grows at a rate of $(1-\delta)\cdot (1-\alpha )\cdot \lambda$ at least. And at most k honest blocks created in the premining stage contributed to the score of the attack chain.
 
@@ -200,7 +201,7 @@ In particular, there is a positive probability that at time $u - T_1$ the premin
 
 In Claim 1 we saw that for any $r$ such that $\widehat{B} \in BLUE_k(G^{pub}_ r)$ , all blocks in $\hat{B}$ ’s anticone are red in $G^pub_r$ . This implies that, as long as $\widehat{B}$ is blue in the public DAG, only attacker blocks contribute to the score of the attacker’s chain: $\widehat{B} \in BLUE_k(G^{pub}_ r) \Rightarrow \forall B \in anticone(\hat{B}): BLUE_k(past(B))\setminus future(\widehat{B}) = \not{0}$ (indeed, note that all honest blocks created after time $u + D_{max}$ belong to $future(\widehat{B})$ ). Consequently, the attacker’s best chain grows at a rate of $\alpha \cdot \beta$ at most, as this interval ( $[u+D_{max},\infty )$ ) as well, as long as $\widehat{B} \in BLUE_k(G^{pub}_ r)$ . We have already seen that at any time interval the honest chain’s score grows at a rate of $(1-\delta )·(1-\alpha )\cdot \lambda$ at least.
 
-在断言1中，我们我们看到，对于任何 $r$ ，例如 $\widehat{B} \in BLUE_k(G^{pub}_ r)$ ,所有在 $\hat{B}$ 的反锥体中的区块在 $G^pub_r$ 中是红色的。这意味着，只要 $\widehat{B}$ 在公共DAG中是蓝色的，仅仅攻击者块贡献攻击者链的得分：
+在断言1中，我们我们看到，对于任何 $r$ ，例如 $\widehat{B} \in BLUE_k(G^{pub}_ r)$ ,所有在 $\hat{B}$ 的反锥体中的区块在 $G^{pub}_ r$ 中是红色的。这意味着，只要 $\widehat{B}$ 在公共DAG中是蓝色的，仅仅攻击者块贡献攻击者链的得分：
 
 to the score of the attacker’s chain: $\widehat{B} \in BLUE_k(G^{pub}_ r) \Rightarrow \forall B \in anticone(\widehat{B}): BLUE_k(past(B))\setminus future(\widehat{B}) = \not{0}$ 
 
@@ -240,7 +241,7 @@ Part VI: Finally, we alleviate our assumption that the attacker published no blo
 
 **Claim 4.**The waiting time for the event $\varepsilon (t_0)$ is finite. Moreover, it is upper bounded by a constant that does not depend on $t_0$.
 
-**断言 4.**事件 $\varepsilon (t_0)$ 的等待时间是有限的。而且，它的上限由一个不依赖于 $t_0$ 的常数决定。_
+**断言 4.**事件 $\varepsilon (t_0)$ 的等待时间是有限的。而且，它的上限由一个不依赖于 $t_0$ 的常数决定。
 
 Proof of Claim 4. Let $B$ be an arbitrary honest block created in $time(B)$ . The probability that no other block was created in the interval $[time (B)-D_{max}, time (B)+{max}]$ is given by $e^{-2\cdot D_{max}\cdot \lambda }$ . An arbitrary block $B$ satisfies the first condition in the definition of $\varepsilon (t_0)$ with a positive probability.
 
@@ -250,9 +251,9 @@ Given an arbitrary block $B$ satisfying the above condition, let $T_1$ be the cr
 
 给定任意块 $B$ 满足上述条件,让 $T_1$ 是在 $LAST_k(past (B))$ 中最早被创建块的创建时间。在时间间隔 $[u-T_1, u-D_{max}]$ 内攻击者没有创建其他块的概率由 $((1-\alpha )\cdot (1-\delta ))^k$ 决定。特别是，给定第一个条件，第二个条件满足正概率。
 
-Importantly, for any two blocks $B_1$ and $B_2$ created after $t_0$ and that satisfy $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ , the satisfaction of the first condition with respect to $B_1$ is independent from its satisfaction with respect to $B_2$ . Consequently, the expected waiting time for the occurrence of a block $\widehat{B}$  which satisfies the first two conditions in the definition of $\varepsilon (t_0)$ is finite (see, for instance, Chapter 10.11 in [10]). Moreover, while the precise expected time $\mathbb{E}[Hourglass(t_0)]$ may theoretically depend on $t_0$, the above argument shows that $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ , where const does not depend on $t_0$ . This completes the proof of Claim 4 and of Lemma 9.
+> Importantly, for any two blocks $B_1$ and $B_2$ created after $t_0$ and that satisfy $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ , the satisfaction of the first condition with respect to $B_1$ is independent from its satisfaction with respect to $B_2$ . Consequently, the expected waiting time for the occurrence of a block $\widehat{B}$  which satisfies the first two conditions in the definition of $\varepsilon (t_0)$ is finite (see, for instance, Chapter 10.11 in [10]). Moreover, while the precise expected time $\mathbb{E}[Hourglass(t_0)]$ may theoretically depend on $t_0$, the above argument shows that $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ , where const does not depend on $t_0$ . This completes the proof of Claim 4 and of Lemma 9.
 
-重要的是，对于任意两个块 $B_1$ 和 $B_2$ 在 $t_0$ 后创建，并且满足 $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ ，满足关于 $B_1$ 的第一个条件与满足 $B_2$ 是独立的。因此，满足 $\varepsilon (t_0)$ 的定义中前两个条件的块出现的预期等待时间是有限的（参见，例如，章节10.11 [10]）。此外，尽管精确的预期时间 $\mathbb{E}[Hourglass(t_0)]$ 在理论上可能取决于$t_0$，但上述论证表明 $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ ，其中const不依赖于$t_0$。 这完成了断言4和引理9的证明。
+> 重要的是，对于任意两个块 $B_1$ 和 $B_2$ 在 $t_0$ 后创建，并且满足 $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ ，满足关于 $B_1$ 的第一个条件与满足 $B_2$ 是独立的。因此，满足 $\varepsilon (t_0)$ 的定义中前两个条件的块出现的预期等待时间是有限的（参见，例如，章节10.11 [10]）。此外，尽管精确的预期时间 $\mathbb{E}[Hourglass(t_0)]$ 在理论上可能取决于$t_0$，但上述论证表明 $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ ，其中const不依赖于$t_0$。 这完成了断言4和引理9的证明。
 
 Theorem 5 guarantees that the probability of reorg with respect to a given block $B$ diminishes: $Risk(B, t_1)\rightarrow 0$ . However, it does not guarantee anything about the convergence rate, i.e., the waiting time for a $t_1$ that satisfies $Risk(B, t_1) <\varepsilon$ , for some $\varepsilon > 0$ .^{18} Following the analysis in the proof of Claim 4, the waiting time for an Hourglass block can be upper bounded by a constant in the order of magnitude of $O(e^{C\cdot D_{max}\cdot \lambda })$ , for some $C > 0$ ; and after such a block is created,the analysis implies that $Risk(B,t_1)$ converges to 0 at an exponential rate, due to the random walk dynamic.
 
