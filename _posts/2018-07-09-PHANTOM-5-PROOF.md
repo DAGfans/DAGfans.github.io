@@ -165,7 +165,7 @@ Let $B^{r}_1$ be the argmax of $X^{1}_r$ , and let $C^{r}_1$ be the latest block
 
 让 $B^{r}_1$ 作为 $X^{1}_r$ argmax函数的变量，让 $C^{r}_1$ 成为 $G^{pub}_r \cap BLUE_k(past(B^{r}_1))$ 中最新的块，即，在攻击者链上的蓝色的最新的诚实块。
 
-Recall that for now we are assuming that all attacker blocks that were premined were kept secret until after time $u−D_max$ . Observe that at most k blocks that were created by the attacker before $time(C^{r}_1)$ can be in $BLUE_k(past(B^{r}_1))$ and can contribute to the score of the attacker’s chain.
+Recall that for now we are assuming that all attacker blocks that were premined were kept secret until after time $u−D_{max}$ . Observe that at most k blocks that were created by the attacker before $time(C^{r}_1)$ can be in $BLUE_k(past(B^{r}_1))$ and can contribute to the score of the attacker’s chain.
 
 回想一下，现在我们假设所有被预设的攻击者块都保密，直到时间 $u-D_{max}$ 之后。观察到在 $time(C^{r}_1)$ 之前由攻击者创建的至多k个块可以在 $BLUE_k(past(B^{r}_1))$ 中，并且可以贡献得分给攻击者链条。
 
@@ -181,7 +181,7 @@ Now, by the choice of $K(D_{max},\delta )$ (defined in 1), the probability of an
 
 现在，通过 $K(D_{max},\delta )$ （在定义 1中）的选择，任意诚实块 $B$ 具有太大的诚实反锥体的概率是小的：^{15}
 
-$\Pr_{B\sim arbitrary\ honest\ block\ in\ G^{pub}_ t}\(|\overline{anticone_h}(B,G^{pub}_ t)| > k(D_{max},\delta ))$
+![gif](https://user-images.githubusercontent.com/39436379/42428504-8857934a-8366-11e8-9fa0-a7343a40c3ca.gif)
 
 This is because block creation follows a Poisson process, and because honest blocks that were created $D_{max}$ seconds before (after) $B$ belong to its past (future), hence are not in its anticone. Since any block that is blue in the honest chain contributes to its score, at any time interval, the score of the public chain grows at a rate of $(1-\delta)\cdot (1-\alpha )\cdot \lambda$ at least. And at most k honest blocks created in the premining stage contributed to the score of the attack chain.
 
