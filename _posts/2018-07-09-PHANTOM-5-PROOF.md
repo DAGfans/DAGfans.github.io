@@ -181,7 +181,7 @@ Now, by the choice of $K(D_{max},\delta )$ (defined in 1), the probability of an
 
 现在，通过 $K(D_{max},\delta )$ （在定义 1中）的选择，任意诚实块 $B$ 具有太大的诚实反锥体的概率是小的：^{15}
 
-$\Pr_{B\sim arbitrary\ honest\ block\ in\ G^{pub}_ t}$$(|\overline{anticone_h}(B,G^{pub}_ t)| > k(D_{max},\delta ))$
+***$\Pr_{B\sim arbitrary\ honest\ block\ in\ G^{pub}_ t}$$(|\overline{anticone_h}(B,G^{pub}_ t)| > k(D_{max},\delta ))$***
 
 This is because block creation follows a Poisson process, and because honest blocks that were created $D_{max}$ seconds before (after) $B$ belong to its past (future), hence are not in its anticone. Since any block that is blue in the honest chain contributes to its score, at any time interval, the score of the public chain grows at a rate of $(1-\delta)\cdot (1-\alpha )\cdot \lambda$ at least. And at most k honest blocks created in the premining stage contributed to the score of the attack chain.
 
@@ -251,9 +251,9 @@ Given an arbitrary block $B$ satisfying the above condition, let $T_1$ be the cr
 
 给定任意块 $B$ 满足上述条件,让 $T_1$ 是在 $LAST_k(past (B))$ 中最早被创建块的创建时间。在时间间隔 $[u-T_1, u-D_{max}]$ 内攻击者没有创建其他块的概率由 $((1-\alpha )\cdot (1-\delta ))^k$ 决定。特别是，给定第一个条件，第二个条件满足正概率。
 
-Importantly, for any two blocks $B_1$ and $B_2$ created after $t_0$ and that satisfy $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ , the satisfaction of the first condition with respect to $B_1$ is independent from its satisfaction with respect to $B_2$ . Consequently, the expected waiting time for the occurrence of a block $\widehat{B}$  which satisfies the first two conditions in the definition of $\varepsilon (t_0)$ is finite (see, for instance, Chapter 10.11 in [10]). Moreover, while the precise expected time $\mathbb{E}[Hourglass(t_0)]$ may theoretically depend on $t_0$, the above argument shows that $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ , where const does not depend on $t_0$ . This completes the proof of Claim 4 and of Lemma 9.
+*Importantly, for any two blocks $B_1$ and $B_2$ created after $t_0$ and that satisfy $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ , the satisfaction of the first condition with respect to $B_1$ is independent from its satisfaction with respect to $B_2$ . Consequently, the expected waiting time for the occurrence of a block $\widehat{B}$  which satisfies the first two conditions in the definition of $\varepsilon (t_0)$ is finite (see, for instance, Chapter 10.11 in [10]). Moreover, while the precise expected time $\mathbb{E}[Hourglass(t_0)]$ may theoretically depend on $t_0$, the above argument shows that $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ , where const does not depend on $t_0$ . This completes the proof of Claim 4 and of Lemma 9.*
 
-重要的是，对于任意两个块 $B_1$ 和 $B_2$ 在 $t_0$ 后创建，并且满足 $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ ，满足关于 $B_1$ 的第一个条件与满足 $B_2$ 是独立的。因此，满足 $\varepsilon (t_0)$ 的定义中前两个条件的块出现的预期等待时间是有限的（参见，例如，章节10.11 [10]）。此外，尽管精确的预期时间 $\mathbb{E}[Hourglass(t_0)]$ 在理论上可能取决于$t_0$，但上述论证表明 $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ ，其中const不依赖于$t_0$。 这完成了断言4和引理9的证明。
+*重要的是，对于任意两个块 $B_1$ 和 $B_2$ 在 $t_0$ 后创建，并且满足 $|time(B_1)-time(B_2)| > 4\cdot D_{max}$ ，满足关于 $B_1$ 的第一个条件与满足 $B_2$ 是独立的。因此，满足 $\varepsilon (t_0)$ 的定义中前两个条件的块出现的预期等待时间是有限的（参见，例如，章节10.11 [10]）。此外，尽管精确的预期时间 $\mathbb{E}[Hourglass(t_0)]$ 在理论上可能取决于$t_0$，但上述论证表明 $\mathbb{E}[Hourglass(t_0)]< const + 4 \cdot d$ ，其中const不依赖于$t_0$。 这完成了断言4和引理9的证明。*
 
 Theorem 5 guarantees that the probability of reorg with respect to a given block $B$ diminishes: $Risk(B, t_1)\rightarrow 0$ . However, it does not guarantee anything about the convergence rate, i.e., the waiting time for a $t_1$ that satisfies $Risk(B, t_1) <\varepsilon$ , for some $\varepsilon > 0$ .^{18} Following the analysis in the proof of Claim 4, the waiting time for an Hourglass block can be upper bounded by a constant in the order of magnitude of $O(e^{C\cdot D_{max}\cdot \lambda })$ , for some $C > 0$ ; and after such a block is created,the analysis implies that $Risk(B,t_1)$ converges to 0 at an exponential rate, due to the random walk dynamic.
 
