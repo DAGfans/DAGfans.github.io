@@ -1,9 +1,9 @@
 ---
 layout: posts
 categories:
-  - Paper
-image: https://user-images.githubusercontent.com/22833166/38848616-90b68176-423a-11e8-87e1-0287b5ed15e6.png
-title: "SPECTRE:3. SPECTRE VS BITCOIN – OVERVIEW"
+  - Blog
+image: https://user-images.githubusercontent.com/39436379/42687630-ff21011a-86cb-11e8-9b8d-3f93bb48c2ab.png
+title: "SPECTRE:Incentives and Trade-offs in Transaction Selection in DAG-based Protocols"
 ---
 >文本 https://stanford2017.scalingbitcoin.org/transcript/stanford2017/incentives-tradeoffs-transaction-selection-in-dag-based-protocols
 
