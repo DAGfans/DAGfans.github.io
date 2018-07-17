@@ -1,7 +1,7 @@
 ---
 layout: posts
 categories:
-  - Paper
+  - Blog
 image: https://user-images.githubusercontent.com/39436379/40982280-700c70f6-690f-11e8-9b13-6d523d030eb0.png
 title: "An Introduction to the BlockDAG Paradigm"
 tags:
