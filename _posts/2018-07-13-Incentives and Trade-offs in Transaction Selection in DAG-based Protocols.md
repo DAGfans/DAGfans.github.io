@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/39436379/42671366-35705a3e-8692-11e8-908f-47404f6be305.png
 title: "Incentives and Trade-offs in Transaction Selection in DAG-based Protocols"
 tags:
-  DAG
+  BASIS
 ---
 
 >文本 https://stanford2017.scalingbitcoin.org/transcript/stanford2017/incentives-tradeoffs-transaction-selection-in-dag-based-protocols
