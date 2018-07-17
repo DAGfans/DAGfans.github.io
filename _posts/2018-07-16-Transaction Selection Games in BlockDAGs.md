@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/39436379/42679444-8820eea2-86b4-11e8-92c5-f9dc41ff43b7.gif
 title: "Transaction Selection Games in BlockDAGs"
 tags:
-  DAG
+  BASIS
 ---
 
 
