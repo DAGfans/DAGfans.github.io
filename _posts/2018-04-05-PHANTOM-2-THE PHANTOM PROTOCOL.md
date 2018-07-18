@@ -199,7 +199,7 @@ Thus, the reader should think of our algorithm (informally) as approximating the
 
 因此，读者应该将我们的算法（非正式地）想象为近似最大k-集群SubDAG问题的最佳解决方案。
 
-![fig 3](https://user-images.githubusercontent.com/22833166/37557316-b6d343a4-2a3d-11e8-8ac2-e66eab0aab45.jpg)
+![1](https://user-images.githubusercontent.com/39436379/42873332-59d893d2-8ab1-11e8-8b58-a6cd76c45ed4.png)
 
 **Fig. 3:** An example of a blockDAG G and the operation of the greedy algorithm to construct its blue set $BLUE_k(B)$ set, under the parameter k= 3.
 
