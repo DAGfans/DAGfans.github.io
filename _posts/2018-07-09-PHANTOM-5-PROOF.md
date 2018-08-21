@@ -11,9 +11,6 @@ tags:
 > * **Source：**[https://eprint.iacr.org/2018/104.pdf](https://eprint.iacr.org/2018/104.pdf)
 > * **TranStudy：**[https://github.com/DAGfans/TranStudy/edit/master/Papers/PHANTOM/5-PROOF.md](https://github.com/DAGfans/TranStudy/edit/master/Papers/PHANTOM/5-PROOF.md)
 
-> * **Source：**[https://eprint.iacr.org/2018/104.pdf](https://eprint.iacr.org/2018/104.pdf)
-> * **TranStudy：**[https://github.com/DAGfans/TranStudy/edit/master/Papers/PHANTOM/5-PROOF.md](https://github.com/DAGfans/TranStudy/edit/master/Papers/PHANTOM/5-PROOF.md)
-
 # 5. PROOF
 
 # 5. 证明
@@ -204,11 +201,11 @@ This gap is captured by the following definition: For a time $r > 0$ , define
 让我们比较诚实链和任何不包含 $\widehat B$ 的链的得分。
 以下定义可以看出这一差距：对于时间 $r > 0$ ，定义
 
- $X^1_r:=\max_{B:\widehat{B} \notin Chn(B)}\{score(Chn(B))\}$
+ $$X^1_r:=\max_{B:\widehat{B} \notin Chn(B)}\{score(Chn(B))\}$$
 
- $X^2_r:=\max_{B:\widehat{B} \in Chn(B)}\{score(Chn(B))\}$
+ $$X^2_r:=\max_{B:\widehat{B} \in Chn(B)}\{score(Chn(B))\}$$
 
- $X_r:=X^{1}_r-X^{2}_r$
+ $$X_r:=X^{1}_r-X^{2}_r$$
 
 Let us focus first on the evolution of the process $X_r$ between time 0 and time $u-T_1$. 
 We refer to the lead $X_{u-T_1}$ ，that the attacker obtained at the end of this stage as “the premining gap”; see [8].
@@ -224,7 +221,7 @@ Recall that for now we are assuming that all attacker blocks that were premined 
 Observe that at most k blocks that were created by the attacker before $time(C^{r}_1)$ can be in $BLUE_k(past(B^{r}_1))$ and can contribute to the score of the attacker’s chain.
 
 回想一下，现在我们假设所有被预挖的攻击者块都保密，直到时间 $u-D_{max}$ 之后。
-通过观察可知在时间 $(C^{r}_1)$ 之前由攻击者创建的至多k个块可以在 $BLUE_k(pst(B^{r}_1))$ 中，并且可以贡献得分给攻击者链。
+通过观察可知在时间 $(C^{r}_1)$ 之前由攻击者创建的至多k个块可以在 $BLUE_k(past(B^{r}_1))$ 中，并且可以贡献得分给攻击者链。
 
 Thus, between $time(C^{r}_1)$ and time $u-T_1$ , - i.e. during the premining phase – the score of the attacker chain grows only via the contribution of attacker blocks, and therefore at a rate of $\alpha \cdot \beta$ at most.[^14]
 
@@ -242,7 +239,7 @@ Now, by the choice of $K(D_{max},\delta )$ (defined in 1), the probability of an
 
 现在，通过 $K(D_{max},\delta )$ （在定义 1中）的选择，任意诚实块 $B$ 具有太大的诚实反锥体的概率是很小的: [^15] 
 
-$\Pr_{B\sim arbitrary\ honest\ block\ in\ G^{pub}_t} \left ( \left | \overline{anticone_h}(B,G^{pub}_t) \right |	>k(D_{max},\delta ) \right ) < \delta$
+$$\Pr_{B\sim arbitrary\ honest\ block\ in\ G^{pub}_t} \left ( \left | \overline{anticone_h}(B,G^{pub}_t) \right |	>k(D_{max},\delta ) \right ) < \delta$$
 
 This is because block creation follows a Poisson process, and because honest blocks that were created $D_{max}$ seconds before (after) $B$ belong to its past (future), hence are not in its anticone. 
 Since any block that is blue in the honest chain contributes to its score, at any time interval, the score of the public chain grows at a rate of $(1-\delta)\cdot (1-\alpha )\cdot \lambda$ at least. 
