@@ -271,9 +271,11 @@ All in all, with some positive probability, $X_u + D_{max} < 0$ .
 总而言之，在某个正概率下， $X_{u + D_{max}} < 0$ 。
 
 *Part IV:* Let us turn to look at the evolution of $(X_r)_{r \leq u+D_{max}}$ at the second stage. 
+
 Assume that $X_{u + D_{max}}<0$ .
 
 *第四部分:* 让我们来看看第二阶段 $(X_r)_{r \leq u+D_{max}}$ 的演化。
+
 假设 $X_{u + D_{max}}<0$ 。
 
 In Claim 1 we saw that for any $r$ such that $\widehat{B} \in BLUE_k(G^{pub}_r)$ , all blocks in $\widehat{B}$ ’s anticone are red in $G^{pub}_r$ . 
