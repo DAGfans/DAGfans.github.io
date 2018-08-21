@@ -270,7 +270,7 @@ All in all, with some positive probability, $X_u + D_{max} < 0$ .
 根据第一个假设， $X_{u+D_{max}} = X_u$ 。
 总而言之，在某个正概率下， $X_{u + D_{max}} < 0$ 。
 
-*Part IV:* Let us turn to look at the evolution of $(X_r)_{r \leq u+D_{max}}$ at the second stage. 
+*Part IV:* Let us turn to look at the evolution of $(X_r)\\_{r \leq u+D\\_{max}}$ at the second stage. 
 
 Assume that $X_{u + D_{max}}<0$ .
 
