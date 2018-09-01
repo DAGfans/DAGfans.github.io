@@ -51,7 +51,7 @@ Now open your browser and go to http://localhost:4000
 
 # 如何在 [DAG fans](https://dagfans.org) 官网添加文章
 
-本 github 仓库与 [DAG fans](https://dagfans.org) 官网直接对应。在本仓库中做的改动会立即体现在官网上（不过一般因为缓存的缘故，可能会有一段时间的延迟）。
+本 github 仓库与 [DAG fans](https://dagfans.org) 官网直接对应。在本仓库中做的改动会立即体现在官网上（不过一般因为Jekyll需要时间构建或是缓存方面的缘故，可能会有一段时间的延迟）。
 
 在 DAG fans 官网上添加新文章的方法如下：
 
