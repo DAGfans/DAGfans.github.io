@@ -1,3 +1,54 @@
+# How to run this site locally
+
+This section is mainly copied from [http://kbroman.org/simple_site/pages/local_test.html](http://kbroman.org/simple_site/pages/local_test.html).
+
+To test your site locally, you’ll need
+
+- [ruby](https://www.ruby-lang.org/en/)
+- the [github-pages](https://github.com/github/pages-gem) gem
+
+## Install ruby
+
+There are [lots of different ways to install ruby](https://www.ruby-lang.org/en/installation/).
+
+In Mac OS X, older versions of ruby should already be installed. But you could use the [Ruby Version Manager (RVM)](https://rvm.io/) to have a more recent version. You could also use [Homebrew](https://brew.sh/).
+
+In Windows, use [RubyInstaller](https://rubyinstaller.org/). (In most of this tutorial, I’ve assumed you’re using a Mac or some flavor of Unix. It’s possible that none of this was usable for Windows folks. Sorry!)
+
+## Install the github-pages gem
+
+Run the following command:
+
+```
+gem install github-pages
+```
+
+This will install the github-pages gem and all dependencies (including [jekyll](https://jekyllrb.com/)).
+
+Later, to update the gem, type:
+
+```
+gem update github-pages
+```
+
+## Test your site locally
+
+To construct and test your site locally, go into the directory and type
+
+```
+jekyll build
+```
+
+This will create (or modify) a `_site/` directory, containing everything from `assets/`, and then the `index.md` and all `pages/*.md` files, converted to html. (So there’ll be `_site/index.html` and the various `_site/pages/*.html`.)
+
+Type the following in order to “serve” the site. This will first run build, and so it does not need to be preceded by jekyll build.
+
+```
+jekyll serve
+```
+
+Now open your browser and go to http://localhost:4000
+
 # 如何在 [DAG fans](https://dagfans.org) 官网添加文章
 
 本 github 仓库与 [DAG fans](https://dagfans.org) 官网直接对应。在本仓库中做的改动会立即体现在官网上（不过一般因为缓存的缘故，可能会有一段时间的延迟）。
