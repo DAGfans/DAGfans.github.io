@@ -1,3 +1,5 @@
+markdown: kramdown
+
 collections:
   my_categories:
     output: true
