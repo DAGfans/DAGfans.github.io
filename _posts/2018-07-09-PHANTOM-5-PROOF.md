@@ -321,7 +321,7 @@ This fact does not change our general conclusion that $$Pr (\forall r\geq u+ D_{
 
 第五部分： 首先，我们必须考虑到，不是所有的诚实节点都可以立即发现诚实块，也就是说， $$G^v_r$$ 可能是 $$G^{pub}_r$$ 的一个合适的子集。
 这可能给攻击者带来优势，因为他可以创建区块，立即把他们展示给诚实块，这些块不会和仍没有被这些节点发现的块竞争。
-这个优势只有在假设攻击者在诚实网络在空闲时获得$$额外$$ D_ {max} 秒时间创建块之后才考虑; 参考[8].
+这个优势只有在假设攻击者在诚实网络在空闲时获得额外$$D_{max}$$秒时间创建块之后才考虑; 参考[8].
 这个事实没有改变我们的一般结论 $$Pr(\forall r\geq u+ D_{max} : X_r < 0) > 0$$ ，例如，因为攻击者在这些额外$$D_{max}$$ 秒的时间内没有创建任何块。
 
 Secondly, observe that the honest chain grows according to a random process that is not necessarily Poisson. 
