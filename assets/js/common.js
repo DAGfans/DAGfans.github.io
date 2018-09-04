@@ -688,6 +688,9 @@
 	        _this.$body.removeClass('hiding');
 	        _this.currentContents.start();
 	        _this.isAnimating = false;
+	        if (MathJax) {
+	          MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+	        }
 	      };
 	    })(this);
 	    if (noLoad) {
