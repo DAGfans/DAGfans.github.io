@@ -27,6 +27,33 @@ $$
 \begin{aligned}
 h_i - h_{i - 1 + k_\Delta}
 &= \frac{(i - 2)(i - 1)}{2} - \frac{(i - 3 + k_\Delta)(i - 2 + k_\Delta)}{2}  \\
-&= - \frac{(k_\Delta - 1)(k_\Delta + 2i - 4)}{2}
+&= - \frac{(k_\Delta - 1)(k_\Delta + 2i - 4)}{2}，\\
+h_i
+&= h_{i - 1 + k_\Delta} - \frac{(k_\Delta - 1)(k_\Delta + 2i - 4)}{2}，\\
+|Blue_k(past(a_i))|
+&= i - 1 + h_i  \\
+&= i - 1 + h_{i - 1 + k_\Delta} - \frac{(k_\Delta - 1)(k_\Delta + 2i - 4)}{2}  \\
+&< i - 1 + h_{i - 1 + k_\Delta} - \frac{(k_\Delta - 1)(k_\Delta - 2i - 4)}{2}  \\
+&= i - 1 + h_{i - 1 + k_\Delta} - \frac{k_\Delta^2 - 2k_\Delta i -5k_\Delta + 2i + 4}{2}  \\
+&< i - 1 + h_{i - 1 + k_\Delta} - \frac{k_\Delta^2 - 2k_\Delta -5k_\Delta + 2i + 4}{2}  \\
+&= i - 1 + h_{i - 1 + k_\Delta} - \frac{k_\Delta^2 - 7k_\Delta + 2i + 4}{2}  \\
+&= h_{i - 1 + k_\Delta} - 1 - \frac{k_\Delta^2 - 7k_\Delta + 4}{2}  \\
+&< h_{i - 1 + k_\Delta} - 1 - \frac{k_\Delta^2 - 7k_\Delta}{2}。  \\
 \end{aligned}
+$$
+
+又因为论文A.2的参数假设（Parameter Assumption）一节假设$$k_\Delta (k_\Delta - 7) \geq 4k'$$，所以
+
+$$
+\begin{aligned}
+h_{i - 1 + k_\Delta} - 1 - \frac{k_\Delta^2 - 7k_\Delta}{2}
+&\leq h_{i - 1 + k_\Delta} - 1 - 2k'  \\
+& < h_{i - 1 + k_\Delta} - 1 - k'。
+\end{aligned}
+$$
+
+于是
+
+$$
+|Blue_k(past(a_i))| < h_{i - 1 + k_\Delta} - 1 - k'。
 $$
