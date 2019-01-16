@@ -47,8 +47,7 @@ This design is intended to avoid the need for nodes to reconcile their different
 从技术上讲，SPECTRE将中本聪的区块链泛化为有向无环图 - 区块DAG。 
 （**译注：** 泛化这里指链式结构可以看作Block DAG的特例）
 通过保持块的完整DAG，SPECTRE可以允许矿工并发并且高频地创建区块。 
-这种设计旨在避免节点在块创建时协调其关于所选链的身份的不同世界观。
-（**译注**：这句话指，所谓链式还是图式其实是因为看问题的角度不同，站在DAG的角度来看，链式也算是一种DAG）
+这个设计是为了避免需要调解节点在创建区块时因为各自视角不同而选择的不同的链。
 
 Reasoning about the consensus properties of SPECTRE requires a new formal framework. 
 Indeed, previous work that formalized the robustness of Nakamoto Consensus [7], [15] focused on robustness of blocks in the ledger. 
