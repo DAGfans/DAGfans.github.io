@@ -67,8 +67,8 @@ Practically, these barriers allow for a throughput of thousands of transactions 
 For further discussion refer to Appendices B and D.
 
 当然，λ不能无限增加，否则网络将被消息（区块）淹没并变得拥塞。 
-定理3建立理论框架之上（在第2节中已具体说明），它没有模拟节点带宽和网络容量的限制。 
-实际上，在这些障碍下，协议还是可以允许每秒处理数千次交易，例如，通过设置λ= 10和b = 100。 
+定理3“存活”在理论框架之中（在第2节中已具体说明），它没有模拟节点带宽和网络容量的限制。 
+实际上，在这些障碍下，协议还是可以每秒处理数千次交易，例如设置λ= 10和b = 100。 
 有关进一步的讨论，请参阅附录B和D.
 
 Asymptotically, SPECTRE’s conﬁrmation times are in $\mathcal{O}(\frac{ln(1/ϵ)}{λ(1-2α)}+\frac{D}{1-2α})$ . 
