@@ -30,12 +30,12 @@ SPECTRE采用了比特币的许多解决方案的功能。
 我们在附录D中详细说明了SPECTRE的这种机制。
 块的大小限制为某个值B KB。
 
-Bitcoin’s throughput can be increased by increasing either the block size limit (which in turn increases D) or\and the block creation rate λ. 
-Alas, it is well established that the security threshold of Nakamoto Consensus deteriorates as D · λ increases:
+Bitcoin’s throughput can be increased by increasing either the block size limit (which in turn increases $D$) or\and the block creation rate $\lambda$. 
+Alas, it is well established that the security threshold of Nakamoto Consensus deteriorates as $D \cdot \lambda$ increases:
 
-比特币的吞吐量可以通过增加块大小限制（反过来会增加D）或\和出块率λ来增大。 
-但是，经过充分地论证，中本聪共识的安全阈值会随着D·λ的增加而恶化：
-(**译注：** 这里的D其实指的是区块传播到全网的时间，所以增加区块大小会增加D，不知道为什么论文没有提前说明就直接用了)
+比特币的吞吐量可以通过增加块大小限制（反过来会增加$D$）或\和出块率$λ$来增大。 
+但是，经过充分地论证，中本聪共识的安全阈值会随着$D \cdot \lambda$的增加而恶化：
+(**译注：** 这里的$D$指的是区块传播到全网的时间，所以增加区块大小会增加$D$。见[第2节](23-SPECTRE-2.-FORMAL-STATEMENT-OF-THE-PROBLEM.html)中挖矿协议的定义。)
 
 ### Theorem 2. [Bitcoin is not scalable] The security threshold of the Bitcoin protocol goes to zero as D · λ increases.
 
