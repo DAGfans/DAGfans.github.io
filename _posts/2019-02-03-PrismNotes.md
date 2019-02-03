@@ -37,5 +37,5 @@ $$\overline{\lambda} := \lambda / C$$：网络承载力的一部分，是对协�
 
 ## 有助于理解的笔记
 
-在图6的注释中，作者说“The tradeoffs for the baseline protocols are upper bounds, while that for Prism 1.0 is exact“。
+在图6的注释中，作者说“The tradeoffs for the baseline protocols are upper bounds, while that for Prism 1.0 is exact”。
 这里的意思是基线的协议需要在（吞吐量）上限上做出妥协，而Prism 1.0的上限则正好是$$1 - \beta$$。
