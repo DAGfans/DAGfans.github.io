@@ -73,12 +73,20 @@ $$B$$: the number of transactions contained in a block, defined in section 3.1.
 
 $$B$$：一个区块里包含的交易数量。定义在3.1节。
 
+$$\overline{f}_{\text{BTC}}(\beta)$$: the unique solution of $$\overline{f}$$ to the equation $$1 - e^{-(1 - \beta)\overline{f}} = \beta \overline{f}$$ (formula (9)), defined in section 4.1.
+
+$$\overline{f}_{\text{BTC}}(\beta)$$：等式$$1 - e^{-(1 - \beta)\overline{f}} = \beta \overline{f}$$（公式(9)）中$$\overline{f}$$的唯一解。定义在4.1节。
+
 ## Comments for Comprehension
 
 ## 有助于理解的笔记
 
 在图6的注释中，作者说“The tradeoffs for the baseline protocols are upper bounds, while that for Prism 1.0 is exact”。
 这里的意思是基线的协议需要在（吞吐量）上限上做出妥协，而Prism 1.0的上限则正好是$$1 - \beta$$。
+
+Prism 1.0将区块分为交易区块与核心区块。Prism完整版进一步将核心区块分为提议区块和投票区块。
+
+Prism 1.0主要是解决定序，并且将吞吐量提高到$$1 - \beta$$。
 
 ## 问题
 
