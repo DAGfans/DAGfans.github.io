@@ -87,13 +87,39 @@ $$\overline{f}_{\text{BTC}}(\beta)$$：等式$$1 - e^{-(1 - \beta)\overline{f}} 
 Prism 1.0将区块分为交易区块与核心区块。Prism完整版进一步将核心区块分为提议区块和投票区块。
 
 Prism 1.0主要是解决定序，并且将吞吐量提高到$$1 - \beta$$。
+相比之下，当$$\beta$$接近0.5的时候，比特币和GHOST的吞吐量都接近0。
+
+Prism完整版则解决了确认时间的问题。
 
 ## 问题
 
+Q: In section 3.1, why the adversary can transmit and receive blocks with arbitrary delay, up to delay $$\Delta$$?
+
 问：3.1节，为什么攻击者可以以任意时间的延迟来传送和接收区块，并且延迟上限是$$\Delta$$？
 
-Q: in section 4.1, why the rate of growth is a probability (formula (7)) and its maximum is 1?
+Q: In section 4.1, why the rate of growth of Bitcoin is a probability (formula (7)) and its maximum is 1?
 
-问：4.1节，为什么增长率是个概率（公式(7)）并且最大值是1？
+问：4.1节，为什么比特币增长率是个概率（公式(7)）并且最大值是1？
 
-答：也许是因为一个回合的时间取的就是一个区块传遍整个网络的时间。所以一个回合顶多只能出一个块？
+答：这是因为比特币是单链结构。
+在$$\Delta$$时间，也就是一个区块传遍整个网络的时间内，不管网络中挖出了多少个区块，最长链最多只会接受一个区块。
+根据定义，一回合的时间正好是$$\Delta$$，因此一回合最多只会增长一个区块。
+如果以每回合增长多少区块来定义增长率的话，增长率的最大值就是1。
+又因为只要有一个诚实区块被挖出，最长链就会增长，所以增长率就是诚实区块被挖出的概率。
+根据[Wikipedia](https://en.wikipedia.org/wiki/Poisson_distribution#Probability_of_events_for_a_Poisson_distribution)，$$\Delta$$区间内正好发生$$k$$个事件的概率是
+
+$$
+e^{-r\Delta}\frac{(r\Delta)^k}{k!}，
+$$
+
+其中$$r$$是$$1/\Delta$$时间内发生的事件数的平均值。在本文中，$$r=(1-\beta)f$$。
+于是，诚实区块被挖出的概率即为1减去没有诚实区块被挖出的概率，即
+
+$$
+1 - e^{-r\Delta}\frac{(r\Delta)^0}{0!} = 1 - e^{-r\Delta} = 1 - e^{-(1-\beta)f\Delta}，
+$$
+
+Q: Why the adversary does not know which type of block it is mining until after the block has been mined?
+
+问：为什么攻击者在挖出一个块之前并不知道他挖的是什么类型的块？
+
