@@ -81,15 +81,29 @@ $$\overline{f}_{\text{BTC}}(\beta)$$：等式$$1 - e^{-(1 - \beta)\overline{f}} 
 
 ## 有助于理解的笔记
 
+论文在第4节先论述了Prism的简化版，即Prism 1.0。然后在第5节论述了Prism的完整版。
+
+简化版解决的是吞吐量的问题，目的是将吞吐量提高到$$1 - \beta$$。
+相比之下，当$$\beta$$接近0.5的时候，比特币和GHOST的吞吐量都接近0。
+它的思路是将区块分为交易区块与核心区块。
+核心区块形成一条主链。
+主链的增长率和安全性与比特币相同。
+交易区块被核心区块引用。
+只要保证核心区块是正确的，就能保证交易区块也是正确的。
+交易区块的出块率可以很快都没关系。
+这样就将主链的安全性和出块率之间的关系斩断了。
+出块率快一些也不会影响主链安全性。
+
 在图6的注释中，作者说“The tradeoffs for the baseline protocols are upper bounds, while that for Prism 1.0 is exact”。
 这里的意思是基线的协议需要在（吞吐量）上限上做出妥协，而Prism 1.0的上限则正好是$$1 - \beta$$。
 
-Prism 1.0将区块分为交易区块与核心区块。Prism完整版进一步将核心区块分为提议区块和投票区块。
+4.3节推导出的Prism 1.0的吞吐量公式是$$\overline{\lambda} = 1 - e^{\beta - 1}$$，即下图的红色曲线。
+但理想吞吐量公式是$$\overline{\lambda}^* = 1 - \beta$$，即下图的蓝色曲线。
 
-Prism 1.0主要是解决定序，并且将吞吐量提高到$$1 - \beta$$。
-相比之下，当$$\beta$$接近0.5的时候，比特币和GHOST的吞吐量都接近0。
+![lambda_of_prism_1](https://user-images.githubusercontent.com/10098144/52527632-e7970a80-2d06-11e9-8d59-e06db2c8c580.jpeg)
 
 Prism完整版则解决了确认时间的问题。
+它进一步将核心区块分为提议区块和投票区块。
 
 ## 问题
 
@@ -123,3 +137,6 @@ Q: Why the adversary does not know which type of block it is mining until after 
 
 问：为什么攻击者在挖出一个块之前并不知道他挖的是什么类型的块？
 
+Q: What is common-prefix property mentioned in section 4.3?
+
+Q: What is positive chain quality mentioned in section 4.3?
