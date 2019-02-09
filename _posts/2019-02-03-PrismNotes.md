@@ -116,7 +116,7 @@ $$
 于是，诚实区块被挖出的概率即为1减去没有诚实区块被挖出的概率，即
 
 $$
-1 - e^{-r\Delta}\frac{(r\Delta)^0}{0!} = 1 - e^{-r\Delta} = 1 - e^{-(1-\beta)f\Delta}，
+1 - e^{-r\Delta}\frac{(r\Delta)^0}{0!} = 1 - e^{-r\Delta} = 1 - e^{-(1-\beta)f\Delta}。
 $$
 
 Q: Why the adversary does not know which type of block it is mining until after the block has been mined?
