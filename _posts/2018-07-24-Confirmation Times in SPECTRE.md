@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/39436379/42804972-1cd179ba-89dd-11e8-8d6f-4642f463d3ed.png
 title: "Confirmation Times in SPECTRE"
 tags:
-  BASIS, SPECTRE
+  BASIS SPECTRE
 ---
 
 > Source : https://blog.daglabs.com/confirmation-times-in-spectre-7f68fec0d997  
