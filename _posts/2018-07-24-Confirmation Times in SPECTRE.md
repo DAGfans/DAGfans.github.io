@@ -5,7 +5,7 @@ categories:
 image: https://user-images.githubusercontent.com/39436379/42804972-1cd179ba-89dd-11e8-8d6f-4642f463d3ed.png
 title: "Confirmation Times in SPECTRE"
 tags:
-  BASIS
+  BASIS, SPECTRE
 ---
 
 > Source : https://blog.daglabs.com/confirmation-times-in-spectre-7f68fec0d997  
@@ -186,7 +186,7 @@ SPECTRE中的确认时间很大程度上取决于传播延迟，但这是由每�
 
 Asymptotically, SPECTRE’s confirmation times are in
 
-渐渐地，SPECTRE的确认时间是
+渐近地，SPECTRE的确认时间是
 
 ![1_ea_z18eack9wt9atnz8f5a](https://user-images.githubusercontent.com/39436379/42856903-dff75ce2-8a79-11e8-9b55-b26a5ce078d6.png)
 
