@@ -25,6 +25,10 @@ $$\lambda$$: the throughput, number of transactions confirmed per second, define
 
 $$\lambda$$：吞吐量，即每秒钟确认的交易数量。定义在1.1节。
 
+$$B$$: the number of transactions contained in a block, defined in section 3.1.
+
+$$B$$：一个区块里包含的交易数量。定义在3.1节。
+
 $$C$$: the communication capacity of the network, measured in transactions per second, defined in section 1.2.
 
 $$C$$：网络的通信承载力，以每秒承载的交易数量为度量。定义在1.2节。
@@ -39,9 +43,11 @@ $$f$$：挖矿速率。定义在2.1节。
 
 $$\Delta$$: the time taken transmitting a block from one honest node to another honest node, measured in seconds; on the other hand, the adversary can transmit and receive blocks with arbitrary delay, up to delay $$\Delta$$; defined in section 3.1.
 In the discrete-time round-by-round synchronous model, each round corresponds to $$\Delta$$ seconds.
+$$\Delta = \frac{B}{C} + D$$ (formula (5) in section 3.2).
 
 $$\Delta$$：将区块从一个诚实节点传送到另一个诚实节点所需的时间，以秒度量；另一方面，攻击者可以以任意时间的延迟来传送和接收区块，延迟上限是$$\Delta$$。定义在3.1节。
 在离散时间回合制同步模型中，每回合对应$$\Delta$$秒。
+$$\Delta = \frac{B}{C} + D$$（3.2节公式(5)）。
 
 $$N$$: the set of participating nodes in the network, defined in section 3.1.
 
@@ -68,10 +74,6 @@ $$Z[r]$$：第$$r$$回合中攻击节点挖到的区块数量。定义在3.1节�
 $$\overline{\lambda} := \lambda / C$$: the throughput as a fraction of the network capacity and is a measure of the efficiency of a protocol, defined in the beginning of section 4.
 
 $$\overline{\lambda} := \lambda / C$$：网络承载力的一部分，是对协议效率的一种度量。定义在第4节的开头。
-
-$$B$$: the number of transactions contained in a block, defined in section 3.1.
-
-$$B$$：一个区块里包含的交易数量。定义在3.1节。
 
 $$\overline{f}_{\text{BTC}}(\beta)$$: the unique solution of $$\overline{f}$$ to the equation $$1 - e^{-(1 - \beta)\overline{f}} = \beta \overline{f}$$ (formula (9)), defined in section 4.1.
 
@@ -102,8 +104,15 @@ $$\overline{f}_{\text{BTC}}(\beta)$$：等式$$1 - e^{-(1 - \beta)\overline{f}} 
 
 ![lambda_of_prism_1](https://user-images.githubusercontent.com/10098144/52527632-e7970a80-2d06-11e9-8d59-e06db2c8c580.jpeg)
 
+It is written in section 5.1 that
+
+> Recall physical limits impose two lower bounds on the latency: (1) the propagation delay $D$, and (2) $1/C \log 1/\epsilon$
+
+这里的$1/C \log 1/\epsilon$源自1.2节里的公式(4)。
+
 Prism完整版则解决了确认时间的问题。
 它进一步将核心区块分为提议区块和投票区块。
+1棵提议树和$m$棵投票树。
 
 ## 问题
 
@@ -136,6 +145,8 @@ $$
 Q: Why the adversary does not know which type of block it is mining until after the block has been mined?
 
 问：为什么攻击者在挖出一个块之前并不知道他挖的是什么类型的块？
+
+答：答案在5.2.2节。原因是一个块的类型是由它的nonce哈希决定的，而这个哈希是块的内容全部挖好后才能算出来的。
 
 Q: What is common-prefix property mentioned in section 4.3?
 
