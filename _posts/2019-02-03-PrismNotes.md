@@ -79,6 +79,11 @@ $$\overline{f}_{\text{BTC}}(\beta)$$: the unique solution of $$\overline{f}$$ to
 
 $$\overline{f}_{\text{BTC}}(\beta)$$：等式$$1 - e^{-(1 - \beta)\overline{f}} = \beta \overline{f}$$（公式(9)）中$$\overline{f}$$的唯一解。定义在4.1节。
 
+$$\varepsilon$$: In Bitcoin protocol, a current main chain block remains in the future main-chain with probability $$1 - \varepsilon$$ if on the order of $$\log 1/\varepsilon$$ successive blocks are mined over it.
+Defined in section 5.1.
+
+$$\varepsilon$$：在比特币协议中，当前主链上的一个区块在将来仍然保留在主链中的概率是$$1 - \varepsilon$$，如果后续大约$$\log 1/\varepsilon$$个区块是在它的基础上被挖出的话。定义在5.1节。
+
 ## Comments for Comprehension
 
 ## 有助于理解的笔记
@@ -106,9 +111,9 @@ $$\overline{f}_{\text{BTC}}(\beta)$$：等式$$1 - e^{-(1 - \beta)\overline{f}} 
 
 It is written in section 5.1 that
 
-> Recall physical limits impose two lower bounds on the latency: (1) the propagation delay $D$, and (2) $1/C \log 1/\epsilon$
+> Recall physical limits impose two lower bounds on the latency: (1) the propagation delay $D$, and (2) $1/C \log 1/\varepsilon$
 
-这里的$1/C \log 1/\epsilon$源自1.2节里的公式(4)。
+这里的$1/C \log 1/\varepsilon$源自1.2节里的公式(4)。
 
 Prism完整版则解决了确认时间的问题。
 它进一步将核心区块分为提议区块和投票区块。
