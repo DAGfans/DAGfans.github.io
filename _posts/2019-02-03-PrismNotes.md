@@ -156,6 +156,8 @@ Q: Why the adversary does not know which type of block it is mining until after 
 
 答：答案在5.2.2节。原因是一个块的类型是由它的nonce哈希决定的，而这个哈希是块的内容全部挖好后才能算出来的。
 
+问：4.1节，如何从公式(10)即$$\lambda_{\text{BTC}} \leq \beta \overline{f}(\beta) B / \Delta$$推出$$\lambda_{\text{BTC}} \leq \beta \overline{f}(\beta)$$？
+
 Q: What is common-prefix property mentioned in section 4.3?
 
 Q: What is positive chain quality mentioned in section 4.3?
