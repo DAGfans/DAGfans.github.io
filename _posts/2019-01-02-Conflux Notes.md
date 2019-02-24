@@ -15,7 +15,11 @@ title: "Conflux笔记"
 
 以上链接来自[知乎上的Conflux中文社区的一个回答](https://www.zhihu.com/question/305112969/answer/550983357)。
 
-在Conflux论文的附录A.2的攻击策略中，作者定义了一个正整数数列：
+## 论文末尾对Phantom的攻击策略
+
+思路：定义一批攻击区块，即文中的集合$A$，使作恶tips的分值比诚实tips的分值高。这样Phantom算法就会从作恶tips开始构造主链。
+
+在攻击策略中，作者定义了一个正整数数列：
 
 $$
 h_n = \frac{(n - 2)(n - 1)}{2} + 1
