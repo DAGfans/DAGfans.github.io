@@ -124,6 +124,8 @@ Prism完整版则解决了确认时间的问题。
 
 ## 问题
 
+Q: Why "one can simply increase the number of transaction blocks that a proposer block points to with- out compromising the security of the blockchain" (mentioned in section 4.1)?
+
 Q: In section 3.1, why the adversary can transmit and receive blocks with arbitrary delay, up to delay $$\Delta$$?
 
 问：3.1节，为什么攻击者可以以任意时间的延迟来传送和接收区块，并且延迟上限是$$\Delta$$？
@@ -161,3 +163,5 @@ Q: Why the adversary does not know which type of block it is mining until after 
 Q: What is common-prefix property mentioned in section 4.3?
 
 Q: What is positive chain quality mentioned in section 4.3?
+
+问：一个投票区块根据什么规则来决定它要投票给哪个提议区块？
