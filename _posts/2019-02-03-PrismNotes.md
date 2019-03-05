@@ -169,7 +169,7 @@ Q: What is positive chain quality mentioned in section 4.3?
 答：论文中唯一提到投票规则的话在5.2.1节：
 The vote of the voter blocktree is decided by the vote cast by the earliest voter block along its main chain。
 
-我应该是根据接收到的时间，谁先到投谁。不过更具体地说，投票规则要分两种情况。
+应该是根据接收到的时间，谁先到投谁。不过更具体地说，投票规则要分两种情况。
 
 一种情况是投票区块挖好的时候，挖这个块的挖矿节点还没有收到任何提议区块。
 这时投票块不进行任何投票，挖矿节点马上将这个投票块广播出去。
