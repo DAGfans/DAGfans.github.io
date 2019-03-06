@@ -164,6 +164,15 @@ Q: What is common-prefix property mentioned in section 4.3?
 
 Q: What is positive chain quality mentioned in section 4.3?
 
+问：为什么只要将提议区块的出块率保持在一个较低的数值，那么不管交易区块的出块率有多快，都能实现不低于比特币的安全性？
+当一个提议区块引用了大量的交易区块时，它自身不用对交易区块做校验吗？
+论文4.2节提到Prism 1.0模型里的区块不对交易正确性做校验，因为账本会在以后被清理（sanitized）。
+那么什么时候对账本对清理呢？
+
+答：4.3节开头提到了安全性和比特币相同。更具体的论证需要查看参考文献[10]。
+这里面的论证提到了common-prefix property和positive chain quality。
+对账本的清理应该是由投票区块负责。Prism 1.0不考虑这部分逻辑。
+
 问：一个投票区块根据什么规则来决定它要投票给哪个提议区块？
 
 答：论文中唯一提到投票规则的话在5.2.1节：
