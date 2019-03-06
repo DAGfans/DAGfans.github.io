@@ -171,6 +171,7 @@ Q: What is positive chain quality mentioned in section 4.3?
 
 答：4.3节开头提到了安全性和比特币相同。更具体的论证需要查看参考文献[10]。
 这里面的论证提到了common-prefix property和positive chain quality。
+可能本质上还要理解为什么比特币为了安全性需要降低出块率。
 对账本的清理应该是由投票区块负责。Prism 1.0不考虑这部分逻辑。
 
 问：一个投票区块根据什么规则来决定它要投票给哪个提议区块？
