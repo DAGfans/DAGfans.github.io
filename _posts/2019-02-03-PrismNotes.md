@@ -160,6 +160,14 @@ Q: Why the adversary does not know which type of block it is mining until after 
 
 问：4.1节，如何从公式(10)即$$\lambda_{\text{BTC}} \leq \beta \overline{f}(\beta) B / \Delta$$推出$$\lambda_{\text{BTC}} \leq \beta \overline{f}(\beta)$$？
 
+Q: It is written in section 4.2 that "a node that hears of a block determines its validity by checking the hash",
+so what does a node do specifically when it checks the hash to determine the validity of a received block?
+
+问：4.2节写道，当一个节点接收到一个区块时，节点通过检查哈希来确定区块的有效性。
+那么节点具体如何通过哈希来确定区块的有效性？
+
+答：检查哈希和区块内容是否匹配。
+
 Q: What is common-prefix property mentioned in section 4.3?
 
 Q: What is positive chain quality mentioned in section 4.3?
