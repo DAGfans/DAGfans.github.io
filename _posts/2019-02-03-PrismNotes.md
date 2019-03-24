@@ -123,6 +123,15 @@ Prism完整版则解决了确认时间的问题。
 验证逻辑交给投票区块。
 每棵投票树的出块率依然很低，但是$m$很大，$m$棵投票树并行投票的话，确认速度就会变快。
 
+注意当多个提议区块相互竞争时，并不是简单看谁获得票数多谁就获胜。
+比如一个提议区块获得499票，另一个提议区块获得501票，这时并不能立即判定501票的获胜。
+这种情况下至少要多等一层才能确认。
+Prism的快速确认是指对诚实无争议的交易能够以接近物理极限的时间来确认。
+通常诚实交易会被包含在所有可选的账本中，这时可以说交易收获的票数是全票通过（尽管每个可选的账本获得的票数不一）。
+对于双花交易的话，还是要多等一会儿。
+但即便如此也还是会比比特币快，因为可能多等一层就能将可选的账本排除剩下一个。
+见论文1.4节提到list decoding的部分，以及论文图5。
+
 ## 问题
 
 Q: Why "one can simply increase the number of transaction blocks that a proposer block points to with- out compromising the security of the blockchain" (mentioned in section 4.1)?
