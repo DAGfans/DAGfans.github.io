@@ -26,6 +26,11 @@ $$D$$: the propagation time of a message to reach all nodes in seconds, defined 
 
 $$D$$：一条消息传播至全网所需的时间秒数。定义在第2节对挖矿协议的正式描述中。
 
+$$d$$: upper bound on $$D$$ (the recent delay diameter in the network), defined in Appendix C, before Algorithm 3 Risk (offline).
+
+$$d$$：$$D$$的上限（最近的网络延迟直径）。
+定义在附录C，在算法3风险（离线）之前。
+
 $$G^v_t$$: the state of the DAG ledger formed by transactions observed by node $v$ at time $t$, defined in the formal statement of formation of ledger in section 2.
 
 $$G^v_t$$：节点$v$在时刻$t$观察到的由交易组成的DAG账本的状态。定义在第2节对账本构成的正式描述中。
@@ -73,3 +78,8 @@ The expected value is $$M_1 / \lambda$$ (Part VI in Appendix E). $$\mathbb{E}[\p
 
 $$\psi(t,D,\lambda,\alpha,\epsilon) := \min\{s \geq t : tx \in RobustTxO(G^v_s,D,\lambda,\alpha,\epsilon)\}$$, 交易$$tx \in G^v_t$$被节点$$v$$鲁棒接受的时间。
 定义在第2节，属性3（弱活跃度）。
+
+$$received^v(x)$$: the time at which node $v$ received block $x$, defined in Appendix C before Algorithm 7 Risk (online).
+
+$$received^v(x)$$：节点$v$收到区块$x$的时刻。
+定义在附录C，在算法7风险（在线）之前。
