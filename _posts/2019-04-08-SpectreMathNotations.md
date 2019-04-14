@@ -83,3 +83,7 @@ $$received^v(x)$$: the time at which node $v$ received block $x$, defined in App
 
 $$received^v(x)$$：节点$v$收到区块$x$的时刻。
 定义在附录C，在算法7风险（在线）之前。
+
+$$future(z,G)$$: the subset of blocks in $G$ from which block $z$ is reachable, defined in section 4.A.
+
+$$future(z,G)$$：在$G$中能够到达区块$z$的区块子集。 定义在第4.A节。
