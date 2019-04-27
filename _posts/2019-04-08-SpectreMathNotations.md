@@ -91,3 +91,7 @@ $$future(z,G)$$：在$G$中能够到达区块$z$的区块子集。 定义在第4
 $$\pi$$: stationary distribution, defined at the end of proof of Corollary 17.
 
 $$\pi$$：平稳分布。 定义在推论17的证明过程末尾。
+
+$$x^+$$: $\max \lbrace 0,x \rbrace$, defined at the beginning of Appendix E, A. Additional notation.
+
+$$x^+$$：$\max \lbrace 0,x \rbrace$，定义在附录E开头，A. 额外符号。
