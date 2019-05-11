@@ -89,10 +89,11 @@ $$future(z,G)$$: the subset of blocks in $G$ from which block $z$ is reachable, 
 $$future(z,G)$$：在$G$中能够到达区块$z$的区块子集。 定义在第4.A节。
 
 $$\pi$$: stationary distribution, defined in the numerical method to calculate $f_{\text{pre_mine}}$ after the proof of Corollary 17.
-It is also the eigenvector of $T$ corresponding to the eigenvalue 1.
+It is also the eigenvector of $T$ corresponding to the eigenvalue 1,
+where $T$ is the transition probability matrix of gap described in the same place.
 
 $$\pi$$：平稳分布。 定义在推论17的证明结束后，$f_{\text{pre_mine}}$的数值计算方法中。
-它同时也是矩阵$T$的特征值1对应的特征向量。
+它同时也是矩阵$T$的特征值1对应的特征向量，其中$T$是论文中同一处地方描述的差值（gap）转移概率矩阵。
 
 $$x^+$$: $\max \lbrace 0,x \rbrace$, defined at the beginning of Appendix E, A. Additional notation.
 
