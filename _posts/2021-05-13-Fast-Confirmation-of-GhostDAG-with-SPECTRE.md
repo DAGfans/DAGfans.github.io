@@ -1,3 +1,15 @@
+---
+layout: posts
+categories:
+  - Blog
+image: https://miro.medium.com/max/4800/1*bPA5SjO-MqWnrEVO_cqZog.png
+title: "Fast Confirmation of GhostDAG with SPECTRE"
+tags:
+  - SPECTRE
+  - GhostDAG
+---
+# Fast Confirmation of GhostDAG with SPECTRE
+
 GhostDAG[1] protocol from DAGlabs[3] is an upgrade to SPECTRE[2] protocol, supporting transaction linear-ordering, which is the prerequisite of on-chain Smart Contracts. The trade-off is that GhostDAG's confirmation time will be longer than SPECTRE 's. GhostDAG has been exploring how to maintain the GhostDAG transaction linear ordering capability while also having SPECTRE 's fast confirmation capability. The latest paper has provided a reference implementation. We may study together how does it work.
 
 GhostDAG's confirmation is slower than SPECTRE 's because it has to estimate the maximum network delay, which is the maximum time it takes for a block to spread across the entire network. The delay time should be large enough for the vast majority of nodes to propagate throughout the network. The calculation of the confirmation time is based on the delay time so that the confirmation time will increase accordingly. The confirmation time of SPECTRE depends only on the propagation delay of the node itself and can be as close as possible to the limit of the confirmation speed.
