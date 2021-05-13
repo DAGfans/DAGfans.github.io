@@ -32,9 +32,9 @@ $$pumping\_idx(b,G) := min \{ j : gap(b, ⟨b,G, j⟩) = 0\}$$[^1]
 
 Now we may derive the blue set based on the pumping index. There is a Condorcet paradox regarding SPECTRE that it would happen that $a ≺_G b, b ≺_G c, c ≺_G a$, however, since SPECTRE only affects blue set generation, even if this paradox occurs, GhostDAG could get the linear order of transactions in the blue set. In addition, the calculation of SPECTRE does not take into account the maximum network delay so that the confirmation would be faster. 
 
-​	
 
-Pseudo code, from[^1]
+
+Pseudo code, from GhostDAG [^1]
 
 **Input**:  $G = (V, E)$ – a block DAG, $k$ – the propagation parameter
 **Output**:  $BLUE_k(G)$ – the dense-set of G 
