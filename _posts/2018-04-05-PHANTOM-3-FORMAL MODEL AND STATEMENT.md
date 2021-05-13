@@ -62,14 +62,14 @@ Block creation follows a Poisson process with parameter λ.
 For the sake of simplicity, we assume that λ is constant.^7 
 The computational power of node $v∈ N$ is captured by $0 < α_v< 1$ , which represents the probability that node v will be the creator of the next block in the system (at any point in time; this is a memoryless process). 
 The attackers’ computational power is less than 50%. 
-Thus $∑_{v∈N}{ }$${α_v=1}$, and $∑_{v∈malicious}{}$${α_v := α <0.5}$.
+Thus $∑_{v∈N}\left [$ $α_v=1\right ]}$, and $∑_{v∈malicious} \left [α_v := α <0.5\right ]$.
 
 工作量证明。节点通过解决工作量证明难题来创建交易块。 
 块创建遵循具有参数λ的泊松过程。 
 为了简单起见，我们假设λ是恒定的。^7 
 节点$v∈ N$的计算能力限定在$0 < α_v< 1$，它表示节点v将是系统中下一个块的创建者（在任何时间点; 这是一个无记忆的过程）的概率。 
 攻击者的计算能力不到50％。 
-因此，$∑_{v∈N}α}$ _v= 1}$， $∑_{v∈malicious}{ }$$α_v := α <0.5$（译注：原文在这里用的符号=:是笔误，实际应该是:=，表示“定义为”）。
+因此，$∑_{v∈N}α}$$_v= 1}$， $∑_{v∈malicious}{ }$$α_v := α <0.5$（译注：原文在这里用的符号=:是笔误，实际应该是:=，表示“定义为”）。
 
 (^7) In practice, λ must occasionally be readjusted to account for shifting network conditions. 
 PHANTOM can support a retargeting mechanism similar to Bitcoin’s, e.g., readjust every time that $Chn(G)$ grows by 2016 blocks. 
