@@ -62,7 +62,7 @@ Block creation follows a Poisson process with parameter λ.
 For the sake of simplicity, we assume that λ is constant.^7 
 The computational power of node $v∈ N$ is captured by $0 < α_v< 1$ , which represents the probability that node v will be the creator of the next block in the system (at any point in time; this is a memoryless process). 
 The attackers’ computational power is less than 50%. 
-Thus $∑_{v∈N}\left [$ $α_v=1\right ]}$, and $∑_{v∈malicious} \left [α_v := α <0.5\right ]$.
+Thus $∑_{v∈N}{{α}_{v}=1}$, and $∑_{v∈malicious} {\α_\v := α <0.5}$.
 
 工作量证明。节点通过解决工作量证明难题来创建交易块。 
 块创建遵循具有参数λ的泊松过程。 
