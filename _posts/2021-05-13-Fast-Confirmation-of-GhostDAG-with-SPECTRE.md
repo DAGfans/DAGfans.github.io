@@ -39,7 +39,7 @@ Pseudo code, from[^1]
 **Input**:  $G = (V, E)$ – a block DAG, $k$ – the propagation parameter
 **Output**:  $BLUE_k(G)$ – the dense-set of G 
 
-1. **function** $CALC-BLUE(G,k)$
+>1. **function** $CALC-BLUE(G,k)$
 2.   ​	$BLUE_k(G)←∅$
 3.   ​	$≺_G ← SPECTRE(G)$
 4.   ​	**for**  $b∈G$ **do**
